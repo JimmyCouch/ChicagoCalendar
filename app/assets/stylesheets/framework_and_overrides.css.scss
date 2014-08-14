@@ -11,6 +11,22 @@ img {
   font-size: inherit;
   }
 
+@font-face {
+  font-family: 'Glyphicons Halflings';
+  src: url('/assets/glyphicons-halflings-regular.eot');
+  src: url('/assets/glyphicons-halflings-regular.eot?#iefix') format('embedded-opentype'), url('/assets/glyphicons-halflings-regular.woff') format('woff'), url('/assets/glyphicons-halflings-regular.ttf') format('truetype'), url('/assets/glyphicons-halflings-regular.svg#glyphicons_halflingsregular') format('svg');
+}
+
+
+@import url(http://fonts.googleapis.com/css?family=Hind);
+
+body {
+  /*font-family: chicagoFont;*/
+  /*font-family: 'Keania One', cursive;*/
+  font-family: 'Hind', sans-serif;
+}
+
+
 // THESE ARE EXAMPLES YOU CAN MODIFY
 // create your own classes
 // to make views framework-neutral
@@ -34,10 +50,21 @@ img {
 // to make views framework-neutral
 main {
   @extend .container;
-  background-color: #eee;
+  padding-left: 0px;
+  padding-right: 0px;
+  background-color: #FFFFFF;
   padding-bottom: 80px;
   width: 100%;
-  margin-top: 51px; // accommodate the navbar
+  /*margin-top: 51px; // accommodate the navbar*/
+  padding-bottom: 50px;
+  /*background: url('http://mode87.com/untame/demo/parallax/images/home.jpg') 50% 0 fixed;*/
+  /*background: url('http://1833consulting.com/wp-content/uploads/2013/11/800px-Chicago_sunrise_11.jpg') 50% 0 fixed;*/
+  /*background: url('http://www.choosechicago.com/includes/content/images/media/summer6-Background-2000x155.jpg') 50% 0 fixed;*/
+  /*background: url('http://upload.wikimedia.org/wikipedia/commons/8/85/2008-06-10_3000x1000_chicago_skyline.jpg') 50% 0 fixed;*/
+  background: url('http://wallpaperpanda.com/wallpapers/GTr/yK6/GTryK6qTp.jpg') 50% 0 fixed;
+  background-position: -170px 0px;
+
+
   }
 section {
   @extend .row;
@@ -78,4 +105,315 @@ section {
   @extend .btn;
   @extend .btn-primary;
   @extend .btn-xs;
+}
+
+.col-xs-1 {
+  width: 14.2857143%;
+}
+
+.weekdays {
+  padding-bottom: 20px;
+}
+
+.calendar-week-day {
+  height: 50px;
+  /*width: 100px;*/
+  border: 2px solid black;
+}
+
+.calendar-box {
+  height: 100px;
+  /*width: 100px;*/
+  border: 2px solid black;
+}
+
+.about-column {
+  /*border: 2px solid black;*/
+  padding-right: 20px;
+  height: 570px;
+}
+
+.view-column {
+  border-right: 15px solid rgba(32, 32, 32, 0.67);
+  border-left:15px solid rgba(32, 32, 32, 0.67);
+  border-bottom: 15px solid rgba(32, 32, 32, 0.67);
+  background-color: #FFFFFF;
+  padding: 30px;
+}
+
+.about-box {
+  border: 15px solid rgba(32, 32, 32, 0.67);
+  height: 500px;
+  background-color: #FFFFFF;
+}
+
+.vcenter {
+  position: relative;
+    top: 50%;
+    -webkit-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
+}
+
+.affix {
+  top: 50px !important;
+  width:100%;
+  margin-bottom: 50px;
+}
+
+body {
+  /*height: 1000px;*/
+  /*margin-top: 50px;*/
+  padding-top: 100px;
+}
+
+.navbar {
+  border-radius: 0px;
+  border: none;
+}
+
+.navbar-form {
+   padding-left: 0;
+}
+
+.navbar-collapse{
+   padding-left:0; 
+}
+
+.navbar {
+  margin-bottom: 0;
+}
+
+
+.divide-nav{
+  height: 50px;
+  background-color: #428bca;
+}
+
+.divide-text{
+    color:#fff;
+    line-height: 20px;
+    font-size:20px;
+    padding: 15px 0;
+}
+
+.filler{
+  min-height: 2000px;
+}
+
+.main-body {
+  padding-top: 50px;
+}
+
+.main-row {
+  /*background-color: #FFFFFF;*/
+  margin-left: 30px;
+}
+
+.navbar-lower {
+  min-height: 50px;
+  z-index: 1030;
+  background-color: #a5d6ef;
+}
+
+.navbar-top {
+  min-height: 100px;
+  background-color: #FFFFFF;
+}
+
+.spacer {
+  min-height: 100px;
+}
+
+#placeholder {
+  top: 100px;
+  position: fixed;
+}
+
+.footer {
+  background-color: #a5d6ef;
+}
+
+.active-day {
+  background-color: #a5d6ef;
+}
+
+
+
+
+/*CALENDAR*/
+
+
+
+#calendar table {
+  border-collapse: collapse;
+  table-layout: fixed;
+  width: 750px;
+}
+
+#calendar tr {
+  height: 1em;
+}
+
+#calendar tr:hover {
+}
+
+#calendar td,
+#calendar th {
+  font-size: 10px;
+  padding: 6px;
+  border: 1px solid #999;
+}
+
+#calendar th {
+  background: #DDD;
+  color: #666;
+  text-align: center;
+  width: 14.2857142857143%;
+}
+
+#calendar td {
+  background: #FFF;
+  color: #777;
+  height: 80px;
+  vertical-align: top;
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+#calendar td:hover{
+  background-color: #D7F2FF;
+
+}
+
+#calendar .notmonth {
+  color: #CCC;
+  background-color: #DDD;
+}
+
+ #month {
+  margin: 0;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  text-align: center;
+}
+
+ #month a, #month a:hover {
+  text-decoration: none;
+  padding: 0 10px;
+  color: #999;
+}
+
+#calendar .today {
+  background-color: #D7F2FF;
+}
+
+#calendar ul {
+  list-style: none;
+  margin: 0;
+  margin-top: 5px;
+  padding-left: 1px;
+}
+
+#calendar li {
+  margin: 0;
+  padding: 0;
+  font-size: 12px;
+}
+
+.about-box-header {
+  height: 50px;
+}
+
+.event-title {
+  padding-top: 10px;
+  text-align: center;
+  color: #000;
+  font-size: 20px;
+
+}
+
+.about-row {
+
+}
+
+.about-box-map {
+  margin: 20px;
+  height: 100px;
+  border: 1px solid black;
+  border-radius: 5px;
+}
+
+.about-box-more {
+  text-align: center;
+}
+
+.about-box-desc {
+
+  margin: 20px;
+  height: 200px;
+
+}
+
+.calendar-day-box:hover {
+
+}
+
+.calendar-day-box {
+  width: 18px;
+  height: 18px;
+
+}
+
+.fa-star {
+  background-color: #fff;
+  border: 1px solid red;
+  border-radius: 50%;
+  padding: 5px;
+  color: #ff0000;
+}
+.calendar-number {
+  padding: 5px;
+  height: 10px;
+  width: 10px;
+}
+
+#calendar li:before {
+
+    font-family: FontAwesome;
+    font-style: normal;
+    font-weight: normal;
+    line-height: 1;
+    -webkit-font-smoothing: antialiased;
+    content: "\f005";
+    color: red; /* or whatever color you prefer */
+    padding-right: 5px;
+    font-size: 7px;
+}
+
+.event-url {
+}
+
+.header-option {
+  display: inline-block;
+  border: 1px solid black;
+  background-color: #fff;
+  padding: 10px;
+  margin-right: 10px;
+  margin-left: 10px;
+}
+
+.header-option:hover {
+  background-color: #D7F2FF;
+}
+
+.options-row {
+  height: 50px;
+  border: 15px solid rgba(32, 32, 32, 0.67);
+  background-color: #FFFFFF;
+  padding: 30px;
+}
+
+.glyphicon {
+  font-size: 20px;
 }

@@ -1,5 +1,12 @@
 source 'https://rubygems.org'
 ruby '2.1.2'
+gem "capybara-webkit"
+gem 'font-awesome-sass'
+gem "twitter-bootstrap-rails"
+gem 'datejs-rails'
+gem 'jquery-turbolinks'
+gem "sanitize"
+gem 'rufus-scheduler'
 gem 'rails', '4.1.4'
 gem 'sqlite3'
 gem 'sass-rails', '~> 4.0.3'
@@ -14,6 +21,8 @@ gem 'bootstrap-sass'
 gem 'devise'
 gem 'figaro', '>= 1.0.0.rc1'
 gem 'simple_form'
+gem "watu_table_builder", :require => "table_builder"
+gem 'whenever', :require => false
 group :development do
   gem 'better_errors'
   gem 'binding_of_caller', :platforms=>[:mri_21]
