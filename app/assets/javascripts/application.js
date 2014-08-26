@@ -11,66 +11,19 @@
 // about supported directives.
 //
 //= require jquery
+//= require underscore
+//= require gmaps/google
 //= require jquery.turbolinks
 //= require jquery_ujs
 //= require twitter/bootstrap
 //= require turbolinks
 //= require bootstrap
+//= require mustache
 //= require date
 //= require date/extras
 //= require_tree .
 
 
-// $(document).ready(function(){
 
-
-	// $(window).bind('scroll', function() {
-
-	// 		console.log("POS: "+ $(window).scrollTop())
-
-	//         $('.navbar-lower').each(function() {
-	//             var post = $(this);
-	//             var position = post.position().top  - $('.navbar-top').outerHeight();
-	//             var position2 = $(".navbar-top").outerHeight();
-
- //            	post.affix({
- //            	  offset: {
- //            	  	top: function () {
- //            			return (this.top = position  ) 
- //                	}
- //            	  }
- //            	});
-	//         });        
-	//     });
-
-
-	// $('.main-body').each(function(index){
-
-	// 	var tmp = $(this).outerHeight();
-	// 	var position = (index * $(this).outerHeight() + $('.navbar-top').outerHeight()) + (index * 71) ;
-	// 	console.log("POS: "+position) 
-
-	// 	var elem = $(this).find("nav")
-
-	// 	elem.attr("data-offset-top", position)
-
-	// })
-
-	// $(window).on('affix.bs.affix', function(){
-	// 	$("body").css("padding-top", 150);
-	// });
-
-
-
-	// $(window).bind('scroll', function() {
-
-	// 	var position =  $(window).scrollTop() - $('.navbar-lower').position().top ;
-	// 	if(position < 0){
-	// 		$("body").css("padding-top", 100);
-	// 	}
-	// })
-
-
-// })
 
 

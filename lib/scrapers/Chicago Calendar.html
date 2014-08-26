@@ -1,0 +1,808 @@
+<!DOCTYPE html>
+<!-- saved from url=(0095)http://localhost:3000/events?date=2014-08-01&view=calendar&sources=choosechicago+builtinchicago -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><style type="text/css">.gm-style .gm-style-mtc label,.gm-style .gm-style-mtc div{font-weight:400}</style><style type="text/css">.gm-style .gm-style-cc span,.gm-style .gm-style-cc a,.gm-style .gm-style-mtc div{font-size:10px}</style><link type="text/css" rel="stylesheet" href="./Chicago Calendar_files/css"><style type="text/css">@media print {  .gm-style .gmnoprint, .gmnoprint {    display:none  }}@media screen {  .gm-style .gmnoscreen, .gmnoscreen {    display:none  }}</style><style type="text/css">.gm-style{font-family:Roboto,Arial,sans-serif;font-size:11px;font-weight:400;text-decoration:none}</style>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chicago Calendar</title>
+    <meta name="description" content="Chicago Calendar">
+    <link data-turbolinks-track="true" href="http://localhost:3000/assets/font-awesome.css?body=1" media="all" rel="stylesheet">
+<link data-turbolinks-track="true" href="http://localhost:3000/assets/events.css?body=1" media="all" rel="stylesheet">
+<link data-turbolinks-track="true" href="http://localhost:3000/assets/framework_and_overrides.css?body=1" media="all" rel="stylesheet">
+<link data-turbolinks-track="true" href="http://localhost:3000/assets/application.css?body=1" media="all" rel="stylesheet">
+    <script src="./Chicago Calendar_files/js"></script><script src="./Chicago Calendar_files/main.js" type="text/javascript"></script>
+    <script src="./Chicago Calendar_files/markerclusterer_packed.js"></script>
+    <script data-turbolinks-track="true" src="./Chicago Calendar_files/jquery.js"></script>
+<script data-turbolinks-track="true" src="./Chicago Calendar_files/underscore.js"></script>
+<script data-turbolinks-track="true" src="./Chicago Calendar_files/base.js"></script>
+<script data-turbolinks-track="true" src="./Chicago Calendar_files/base(1).js"></script>
+<script data-turbolinks-track="true" src="./Chicago Calendar_files/base_builder.js"></script>
+<script data-turbolinks-track="true" src="./Chicago Calendar_files/builder.js"></script>
+<script data-turbolinks-track="true" src="./Chicago Calendar_files/handler.js"></script>
+<script data-turbolinks-track="true" src="./Chicago Calendar_files/null_clusterer.js"></script>
+<script data-turbolinks-track="true" src="./Chicago Calendar_files/common.js"></script>
+<script data-turbolinks-track="true" src="./Chicago Calendar_files/bound.js"></script>
+<script data-turbolinks-track="true" src="./Chicago Calendar_files/circle.js"></script>
+<script data-turbolinks-track="true" src="./Chicago Calendar_files/clusterer.js"></script>
+<script data-turbolinks-track="true" src="./Chicago Calendar_files/kml.js"></script>
+<script data-turbolinks-track="true" src="./Chicago Calendar_files/map.js"></script>
+<script data-turbolinks-track="true" src="./Chicago Calendar_files/marker.js"></script>
+<script data-turbolinks-track="true" src="./Chicago Calendar_files/polygon.js"></script>
+<script data-turbolinks-track="true" src="./Chicago Calendar_files/polyline.js"></script>
+<script data-turbolinks-track="true" src="./Chicago Calendar_files/bound(1).js"></script>
+<script data-turbolinks-track="true" src="./Chicago Calendar_files/circle(1).js"></script>
+<script data-turbolinks-track="true" src="./Chicago Calendar_files/clusterer(1).js"></script>
+<script data-turbolinks-track="true" src="./Chicago Calendar_files/kml(1).js"></script>
+<script data-turbolinks-track="true" src="./Chicago Calendar_files/map(1).js"></script>
+<script data-turbolinks-track="true" src="./Chicago Calendar_files/marker(1).js"></script>
+<script data-turbolinks-track="true" src="./Chicago Calendar_files/polygon(1).js"></script>
+<script data-turbolinks-track="true" src="./Chicago Calendar_files/polyline(1).js"></script>
+<script data-turbolinks-track="true" src="./Chicago Calendar_files/primitives.js"></script>
+<script data-turbolinks-track="true" src="./Chicago Calendar_files/google.js"></script>
+<script data-turbolinks-track="true" src="./Chicago Calendar_files/jquery.turbolinks.js"></script>
+<script data-turbolinks-track="true" src="./Chicago Calendar_files/jquery_ujs.js"></script>
+<script data-turbolinks-track="true" src="./Chicago Calendar_files/transition.js"></script>
+<script data-turbolinks-track="true" src="./Chicago Calendar_files/alert.js"></script>
+<script data-turbolinks-track="true" src="./Chicago Calendar_files/modal.js"></script>
+<script data-turbolinks-track="true" src="./Chicago Calendar_files/dropdown.js"></script>
+<script data-turbolinks-track="true" src="./Chicago Calendar_files/scrollspy.js"></script>
+<script data-turbolinks-track="true" src="./Chicago Calendar_files/tab.js"></script>
+<script data-turbolinks-track="true" src="./Chicago Calendar_files/tooltip.js"></script>
+<script data-turbolinks-track="true" src="./Chicago Calendar_files/popover.js"></script>
+<script data-turbolinks-track="true" src="./Chicago Calendar_files/button.js"></script>
+<script data-turbolinks-track="true" src="./Chicago Calendar_files/collapse.js"></script>
+<script data-turbolinks-track="true" src="./Chicago Calendar_files/carousel.js"></script>
+<script data-turbolinks-track="true" src="./Chicago Calendar_files/affix.js"></script>
+<script data-turbolinks-track="true" src="./Chicago Calendar_files/bootstrap.js"></script>
+<script data-turbolinks-track="true" src="./Chicago Calendar_files/turbolinks.js"></script>
+<script data-turbolinks-track="true" src="./Chicago Calendar_files/bootstrap(1).js"></script>
+<script data-turbolinks-track="true" src="./Chicago Calendar_files/mustache.js"></script>
+<script data-turbolinks-track="true" src="./Chicago Calendar_files/en-US.js"></script>
+<script data-turbolinks-track="true" src="./Chicago Calendar_files/core.js"></script>
+<script data-turbolinks-track="true" src="./Chicago Calendar_files/parser.js"></script>
+<script data-turbolinks-track="true" src="./Chicago Calendar_files/sugarpak.js"></script>
+<script data-turbolinks-track="true" src="./Chicago Calendar_files/time.js"></script>
+<script data-turbolinks-track="true" src="./Chicago Calendar_files/date.js"></script>
+<script data-turbolinks-track="true" src="./Chicago Calendar_files/extras.js"></script>
+<script data-turbolinks-track="true" src="./Chicago Calendar_files/calendar.js"></script>
+<script data-turbolinks-track="true" src="./Chicago Calendar_files/clamp.js"></script>
+<script data-turbolinks-track="true" src="./Chicago Calendar_files/dropdown(1).js"></script>
+<script data-turbolinks-track="true" src="./Chicago Calendar_files/event.js"></script>
+<script data-turbolinks-track="true" src="./Chicago Calendar_files/map(2).js"></script>
+<script data-turbolinks-track="true" src="./Chicago Calendar_files/application.js"></script>
+    <meta content="authenticity_token" name="csrf-param">
+<meta content="vLZRZOtU6QY4NQgbc6zgGkrHQ1bvk2Bi8oZ40sV6HQ0=" name="csrf-token">
+  <script type="text/javascript" charset="UTF-8" src="./Chicago Calendar_files/{common,map,util,marker}.js"></script><script type="text/javascript" charset="UTF-8" src="./Chicago Calendar_files/{infowindow,onion}.js"></script><script type="text/javascript" charset="UTF-8" src="./Chicago Calendar_files/{controls}.js"></script><script type="text/javascript" charset="UTF-8" src="./Chicago Calendar_files/{stats}.js"></script><script type="text/javascript" charset="UTF-8" src="./Chicago Calendar_files/vt"></script><script type="text/javascript" charset="UTF-8" src="./Chicago Calendar_files/vt(1)"></script><script type="text/javascript" charset="UTF-8" src="./Chicago Calendar_files/AuthenticationService.Authenticate"></script><script type="text/javascript" charset="UTF-8" src="./Chicago Calendar_files/QuotaService.RecordEvent"></script><script type="text/javascript" charset="UTF-8" src="./Chicago Calendar_files/QuotaService.RecordEvent"></script></head>
+  <body>
+    <header>
+      <nav class="navbar navbar-top navbar-inverse navbar-fixed-top" role="navigation">
+  <div class="container">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="http://localhost:3000/">Home</a>
+    </div>
+    <div class="collapse navbar-collapse">
+      <ul class="nav navbar-nav">
+          <li><a href="http://localhost:3000/users/sign_in">Sign in</a></li>
+  <li><a href="http://localhost:3000/users/sign_up">Sign up</a></li>
+
+      </ul>
+    </div>
+  </div>
+</nav>
+
+
+
+
+
+    </header>
+    <main role="main">
+       
+       <nav class="navbar navbar-inverse navbar-lower affix-top" data-spy="affix" data-offset-top="50" data-offset-bottom="50">
+	<div class="row text-center" id="menu-dropdown" style="display:none;">
+	<br>
+	<div class="sort-form container">
+		Sources: 
+		<div class="btn-group btn-group-sm">
+		  <div class="btn-group">
+		    <button type="button" class="btn btn-default">choosechicago.com</button>
+		  </div>
+		  <div class="btn-group">
+		    <button type="button" class="btn btn-default">theaterinchicago.com</button>
+		  </div>
+		  <div class="btn-group">
+		    <button type="button" class="btn btn-default">ALL</button>
+		  </div>
+		</div>
+	</div>
+	<br>
+</div>
+	<div class="row text-center">
+		<div id="menu-dropdown-button"><span class="glyphicon glyphicon-collapse-down"></span></div>
+	</div>
+</nav>
+
+
+
+<div class="container main-body">
+  <div class="row main-row">
+    <div class="col-md-9 ">
+		<div class="row text-center options-row">
+    <a href="http://localhost:3000/events?view=calendar&date=2014-08-01">
+	    <div class="header-option vcenter">
+	      		<span class="glyphicon glyphicon-calendar"></span>
+	    </div>
+    </a>
+   	<a href="http://localhost:3000/events?view=map&date=2014-08-01">
+	    <div class="header-option vcenter">
+      		<span class="glyphicon glyphicon-map-marker"></span>
+    	</div>
+    </a>
+   	<a href="http://localhost:3000/events?view=day&date=2014-08-01">
+    	<div class="header-option vcenter">
+     		<span class="glyphicon glyphicon-th-large"></span>
+    	</div>
+    </a>
+</div>
+    	<div class="row view-column">
+		
+<div class="view-type selected" style="display: block;">
+  <h2 id="month">
+  <a href="http://localhost:3000/events?date=2014-07-31&view=calendar">&lt;</a>
+  <span id="current_date">August 2014</span>
+  <a href="http://localhost:3000/events?date=2014-09-01&view=calendar">&gt;</a>
+</h2>
+
+  <div id="calendar">
+    <table>
+      <thead><tr><th>Sunday</th><th>Monday</th><th>Tuesday</th><th>Wednesday</th><th>Thursday</th><th>Friday</th><th>Saturday</th></tr></thead>
+      <tbody><tr class="calendar-day"><td class="notmonth weekend" id="day_27">
+        <div class="calendar-day-box">
+          <a href="http://localhost:3000/events?day=2014-07-27">
+            <div class="calendar-number"> 27</div>
+            <i class="fa fa-star" style="display:none;"></i>
+          </a>
+        </div>
+        
+        <ul>
+        </ul>
+</td><td class="notmonth" id="day_28">
+        <div class="calendar-day-box">
+          <a href="http://localhost:3000/events?day=2014-07-28">
+            <div class="calendar-number"> 28</div>
+            <i class="fa fa-star" style="display:none;"></i>
+          </a>
+        </div>
+        
+        <ul>
+        </ul>
+</td><td class="notmonth" id="day_29">
+        <div class="calendar-day-box">
+          <a href="http://localhost:3000/events?day=2014-07-29">
+            <div class="calendar-number"> 29</div>
+            <i class="fa fa-star" style="display:none;"></i>
+          </a>
+        </div>
+        
+        <ul>
+        </ul>
+</td><td class="notmonth" id="day_30">
+        <div class="calendar-day-box">
+          <a href="http://localhost:3000/events?day=2014-07-30">
+            <div class="calendar-number"> 30</div>
+            <i class="fa fa-star" style="display:none;"></i>
+          </a>
+        </div>
+        
+        <ul>
+        </ul>
+</td><td class="notmonth" id="day_31">
+        <div class="calendar-day-box">
+          <a href="http://localhost:3000/events?day=2014-07-31">
+            <div class="calendar-number"> 31</div>
+            <i class="fa fa-star" style="display:none;"></i>
+          </a>
+        </div>
+        
+        <ul>
+        </ul>
+</td><td id="day_01">
+        <div class="calendar-day-box">
+          <a href="http://localhost:3000/events?day=2014-08-01">
+            <div class="calendar-number"> 1</div>
+            <i class="fa fa-star" style="display:none;"></i>
+          </a>
+        </div>
+        
+        <ul>
+        </ul>
+</td><td class="weekend" id="day_02">
+        <div class="calendar-day-box">
+          <a href="http://localhost:3000/events?day=2014-08-02">
+            <div class="calendar-number"> 2</div>
+            <i class="fa fa-star" style="display:none;"></i>
+          </a>
+        </div>
+        
+        <ul>
+        </ul>
+</td></tr><tr class="calendar-day"><td class="weekend" id="day_03">
+        <div class="calendar-day-box">
+          <a href="http://localhost:3000/events?day=2014-08-03">
+            <div class="calendar-number"> 3</div>
+            <i class="fa fa-star" style="display:none;"></i>
+          </a>
+        </div>
+        
+        <ul>
+        </ul>
+</td><td id="day_04">
+        <div class="calendar-day-box">
+          <a href="http://localhost:3000/events?day=2014-08-04">
+            <div class="calendar-number"> 4</div>
+            <i class="fa fa-star" style="display:none;"></i>
+          </a>
+        </div>
+        
+        <ul>
+        </ul>
+</td><td id="day_05">
+        <div class="calendar-day-box">
+          <a href="http://localhost:3000/events?day=2014-08-05">
+            <div class="calendar-number"> 5</div>
+            <i class="fa fa-star" style="display:none;"></i>
+          </a>
+        </div>
+        
+        <ul>
+        </ul>
+</td><td id="day_06">
+        <div class="calendar-day-box">
+          <a href="http://localhost:3000/events?day=2014-08-06">
+            <div class="calendar-number"> 6</div>
+            <i class="fa fa-star" style="display:none;"></i>
+          </a>
+        </div>
+        
+        <ul>
+        </ul>
+</td><td id="day_07">
+        <div class="calendar-day-box">
+          <a href="http://localhost:3000/events?day=2014-08-07">
+            <div class="calendar-number"> 7</div>
+            <i class="fa fa-star" style="display:none;"></i>
+          </a>
+        </div>
+        
+        <ul>
+        </ul>
+</td><td id="day_08">
+        <div class="calendar-day-box">
+          <a href="http://localhost:3000/events?day=2014-08-08">
+            <div class="calendar-number"> 8</div>
+            <i class="fa fa-star" style="display:none;"></i>
+          </a>
+        </div>
+        
+        <ul>
+        </ul>
+</td><td class="weekend" id="day_09">
+        <div class="calendar-day-box">
+          <a href="http://localhost:3000/events?day=2014-08-09">
+            <div class="calendar-number"> 9</div>
+            <i class="fa fa-star" style="display:none;"></i>
+          </a>
+        </div>
+        
+        <ul>
+        </ul>
+</td></tr><tr class="calendar-day"><td class="weekend" id="day_10">
+        <div class="calendar-day-box">
+          <a href="http://localhost:3000/events?day=2014-08-10">
+            <div class="calendar-number"> 10</div>
+            <i class="fa fa-star" style="display:none;"></i>
+          </a>
+        </div>
+        
+        <ul>
+        </ul>
+</td><td id="day_11">
+        <div class="calendar-day-box">
+          <a href="http://localhost:3000/events?day=2014-08-11">
+            <div class="calendar-number"> 11</div>
+            <i class="fa fa-star" style="display:none;"></i>
+          </a>
+        </div>
+        
+        <ul>
+        </ul>
+</td><td id="day_12">
+        <div class="calendar-day-box">
+          <a href="http://localhost:3000/events?day=2014-08-12">
+            <div class="calendar-number"> 12</div>
+            <i class="fa fa-star" style="display:none;"></i>
+          </a>
+        </div>
+        
+        <ul>
+        </ul>
+</td><td id="day_13">
+        <div class="calendar-day-box">
+          <a href="http://localhost:3000/events?day=2014-08-13">
+            <div class="calendar-number"> 13</div>
+            <i class="fa fa-star" style="display:none;"></i>
+          </a>
+        </div>
+        
+        <ul>
+        </ul>
+</td><td id="day_14">
+        <div class="calendar-day-box">
+          <a href="http://localhost:3000/events?day=2014-08-14">
+            <div class="calendar-number"> 14</div>
+            <i class="fa fa-star" style="display:none;"></i>
+          </a>
+        </div>
+        
+        <ul>
+        </ul>
+</td><td id="day_15">
+        <div class="calendar-day-box">
+          <a href="http://localhost:3000/events?day=2014-08-15">
+            <div class="calendar-number"> 15</div>
+            <i class="fa fa-star" style="display:none;"></i>
+          </a>
+        </div>
+        
+        <ul>
+        </ul>
+</td><td class="weekend" id="day_16">
+        <div class="calendar-day-box">
+          <a href="http://localhost:3000/events?day=2014-08-16">
+            <div class="calendar-number"> 16</div>
+            <i class="fa fa-star" style="display:none;"></i>
+          </a>
+        </div>
+        
+        <ul>
+        </ul>
+</td></tr><tr class="calendar-day"><td class="weekend" id="day_17">
+        <div class="calendar-day-box">
+          <a href="http://localhost:3000/events?day=2014-08-17">
+            <div class="calendar-number"> 17</div>
+            <i class="fa fa-star" style="display:none;"></i>
+          </a>
+        </div>
+        
+        <ul>
+        </ul>
+</td><td id="day_18">
+        <div class="calendar-day-box">
+          <a href="http://localhost:3000/events?day=2014-08-18">
+            <div class="calendar-number"> 18</div>
+            <i class="fa fa-star" style="display:none;"></i>
+          </a>
+        </div>
+        
+        <ul>
+        </ul>
+</td><td id="day_19">
+        <div class="calendar-day-box">
+          <a href="http://localhost:3000/events?day=2014-08-19">
+            <div class="calendar-number"> 19</div>
+            <i class="fa fa-star" style="display:none;"></i>
+          </a>
+        </div>
+        
+        <ul>
+        </ul>
+</td><td id="day_20">
+        <div class="calendar-day-box">
+          <a href="http://localhost:3000/events?day=2014-08-20">
+            <div class="calendar-number"> 20</div>
+            <i class="fa fa-star" style="display:none;"></i>
+          </a>
+        </div>
+        
+        <ul>
+        </ul>
+</td><td id="day_21">
+        <div class="calendar-day-box">
+          <a href="http://localhost:3000/events?day=2014-08-21">
+            <div class="calendar-number"> 21</div>
+            <i class="fa fa-star" style="display:none;"></i>
+          </a>
+        </div>
+        
+        <ul>
+        </ul>
+</td><td id="day_22">
+        <div class="calendar-day-box">
+          <a href="http://localhost:3000/events?day=2014-08-22">
+            <div class="calendar-number"> 22</div>
+            <i class="fa fa-star" style="display:none;"></i>
+          </a>
+        </div>
+        
+        <ul>
+        </ul>
+</td><td class="weekend" id="day_23">
+        <div class="calendar-day-box">
+          <a href="http://localhost:3000/events?day=2014-08-23">
+            <div class="calendar-number"> 23</div>
+            <i class="fa fa-star" style="display:none;"></i>
+          </a>
+        </div>
+        
+        <ul>
+        </ul>
+</td></tr><tr class="calendar-day"><td class="weekend" id="day_24">
+        <div class="calendar-day-box">
+          <a href="http://localhost:3000/events?day=2014-08-24">
+            <div class="calendar-number"> 24</div>
+            <i class="fa fa-star" style="display:none;"></i>
+          </a>
+        </div>
+        
+        <ul>
+        </ul>
+</td><td class="today" id="day_25">
+        <div class="calendar-day-box">
+          <a href="http://localhost:3000/events?day=2014-08-25">
+            <div class="calendar-number"> 25</div>
+            <i class="fa fa-star" style="display:none;"></i>
+          </a>
+        </div>
+        
+        <ul>
+        </ul>
+</td><td class="future" id="day_26">
+        <div class="calendar-day-box">
+          <a href="http://localhost:3000/events?day=2014-08-26">
+            <div class="calendar-number"> 26</div>
+            <i class="fa fa-star" style="display:none;"></i>
+          </a>
+        </div>
+        
+        <ul>
+        </ul>
+</td><td class="future" id="day_27">
+        <div class="calendar-day-box">
+          <a href="http://localhost:3000/events?day=2014-08-27">
+            <div class="calendar-number"> 27</div>
+            <i class="fa fa-star" style="display:none;"></i>
+          </a>
+        </div>
+        
+        <ul>
+        </ul>
+</td><td class="future" id="day_28">
+        <div class="calendar-day-box">
+          <a href="http://localhost:3000/events?day=2014-08-28">
+            <div class="calendar-number"> 28</div>
+            <i class="fa fa-star" style="display:none;"></i>
+          </a>
+        </div>
+        
+        <ul>
+        </ul>
+</td><td class="future" id="day_29">
+        <div class="calendar-day-box">
+          <a href="http://localhost:3000/events?day=2014-08-29">
+            <div class="calendar-number"> 29</div>
+            <i class="fa fa-star" style="display:none;"></i>
+          </a>
+        </div>
+        
+        <ul>
+        </ul>
+</td><td class="weekend future" id="day_30">
+        <div class="calendar-day-box">
+          <a href="http://localhost:3000/events?day=2014-08-30">
+            <div class="calendar-number"> 30</div>
+            <i class="fa fa-star" style="display:none;"></i>
+          </a>
+        </div>
+        
+        <ul>
+        </ul>
+</td></tr><tr class="calendar-day"><td class="weekend future" id="day_31">
+        <div class="calendar-day-box">
+          <a href="http://localhost:3000/events?day=2014-08-31">
+            <div class="calendar-number"> 31</div>
+            <i class="fa fa-star" style="display:none;"></i>
+          </a>
+        </div>
+        
+        <ul>
+        </ul>
+</td><td class="notmonth future" id="day_01">
+        <div class="calendar-day-box">
+          <a href="http://localhost:3000/events?day=2014-09-01">
+            <div class="calendar-number"> 1</div>
+            <i class="fa fa-star" style="display:none;"></i>
+          </a>
+        </div>
+        
+        <ul>
+        </ul>
+</td><td class="notmonth future" id="day_02">
+        <div class="calendar-day-box">
+          <a href="http://localhost:3000/events?day=2014-09-02">
+            <div class="calendar-number"> 2</div>
+            <i class="fa fa-star" style="display:none;"></i>
+          </a>
+        </div>
+        
+        <ul>
+        </ul>
+</td><td class="notmonth future" id="day_03">
+        <div class="calendar-day-box">
+          <a href="http://localhost:3000/events?day=2014-09-03">
+            <div class="calendar-number"> 3</div>
+            <i class="fa fa-star" style="display:none;"></i>
+          </a>
+        </div>
+        
+        <ul>
+        </ul>
+</td><td class="notmonth future" id="day_04">
+        <div class="calendar-day-box">
+          <a href="http://localhost:3000/events?day=2014-09-04">
+            <div class="calendar-number"> 4</div>
+            <i class="fa fa-star" style="display:none;"></i>
+          </a>
+        </div>
+        
+        <ul>
+        </ul>
+</td><td class="notmonth future" id="day_05">
+        <div class="calendar-day-box">
+          <a href="http://localhost:3000/events?day=2014-09-05">
+            <div class="calendar-number"> 5</div>
+            <i class="fa fa-star" style="display:none;"></i>
+          </a>
+        </div>
+        
+        <ul>
+        </ul>
+</td><td class="notmonth weekend future" id="day_06">
+        <div class="calendar-day-box">
+          <a href="http://localhost:3000/events?day=2014-09-06">
+            <div class="calendar-number"> 6</div>
+            <i class="fa fa-star" style="display:none;"></i>
+          </a>
+        </div>
+        
+        <ul>
+        </ul>
+</td></tr></tbody></table>    </div>
+</div>
+
+
+
+
+
+
+		
+<div class="view-type hidden  ">
+	<h2 id="month">
+  <a href="http://localhost:3000/events?date=2014-07-31&view=calendar">&lt;</a>
+  <span id="current_date">August 2014</span>
+  <a href="http://localhost:3000/events?date=2014-09-01&view=calendar">&gt;</a>
+</h2>
+
+	<div id="map" style="height: 718px; position: relative; overflow: hidden; -webkit-transform: translateZ(0px); background-color: rgb(229, 227, 223);"><div class="gm-style" style="position: absolute; left: 0px; top: 0px; overflow: hidden; width: 100%; height: 100%; z-index: 0;"><div style="position: absolute; left: 0px; top: 0px; overflow: hidden; width: 100%; height: 100%; z-index: 0; cursor: url(http://maps.gstatic.com/mapfiles/openhand_8_8.cur) 8 8, default;"><div style="position: absolute; left: 0px; top: 0px; z-index: 1; width: 100%; transform-origin: 0px 0px 0px; transform: matrix(1, 0, 0, 1, 0, 0);"><div style="-webkit-transform: translateZ(0px); position: absolute; left: 0px; top: 0px; z-index: 100; width: 100%;"><div style="position: absolute; left: 0px; top: 0px; z-index: 0;"><div style="position: absolute; left: 0px; top: 0px; z-index: 1;"><div style="width: 256px; height: 256px; -webkit-transform: translateZ(0px); position: absolute; left: -248px; top: -95px;"></div><div style="width: 256px; height: 256px; -webkit-transform: translateZ(0px); position: absolute; left: 8px; top: -95px;"></div></div></div></div><div style="-webkit-transform: translateZ(0px); position: absolute; left: 0px; top: 0px; z-index: 101; width: 100%;"></div><div style="-webkit-transform: translateZ(0px); position: absolute; left: 0px; top: 0px; z-index: 102; width: 100%;"></div><div style="-webkit-transform: translateZ(0px); position: absolute; left: 0px; top: 0px; z-index: 103; width: 100%;"><div style="position: absolute; left: 0px; top: 0px; z-index: -1;"><div style="position: absolute; left: 0px; top: 0px; z-index: 1;"><div style="width: 256px; height: 256px; overflow: hidden; -webkit-transform: translateZ(0px); position: absolute; left: -248px; top: -95px;"><canvas draggable="false" height="512" width="512" style="-webkit-user-select: none; position: absolute; left: 0px; top: 0px; height: 256px; width: 256px;"></canvas></div><div style="width: 256px; height: 256px; overflow: hidden; -webkit-transform: translateZ(0px); position: absolute; left: 8px; top: -95px;"><canvas draggable="false" height="512" width="512" style="-webkit-user-select: none; position: absolute; left: 0px; top: 0px; height: 256px; width: 256px;"></canvas></div></div></div></div><div style="position: absolute; z-index: 0; left: 0px; top: 0px;"><div style="overflow: hidden;"></div></div><div style="position: absolute; left: 0px; top: 0px; z-index: 0;"><div style="position: absolute; left: 0px; top: 0px; z-index: 1;"><div style="width: 256px; height: 256px; -webkit-transform: translateZ(0px); position: absolute; left: 8px; top: -95px; opacity: 1; transition: opacity 200ms ease-out; -webkit-transition: opacity 200ms ease-out;"><img src="./Chicago Calendar_files/vt(2)" draggable="false" style="width: 256px; height: 256px; -webkit-user-select: none; border: 0px; padding: 0px; margin: 0px; -webkit-transform: translateZ(0px);"></div><div style="width: 256px; height: 256px; -webkit-transform: translateZ(0px); position: absolute; left: -248px; top: -95px; opacity: 1; transition: opacity 200ms ease-out; -webkit-transition: opacity 200ms ease-out;"><img src="./Chicago Calendar_files/vt(3)" draggable="false" style="width: 256px; height: 256px; -webkit-user-select: none; border: 0px; padding: 0px; margin: 0px; -webkit-transform: translateZ(0px);"></div></div></div></div><div style="position: absolute; left: 0px; top: 0px; z-index: 2; width: 100%; height: 100%;"></div><div style="position: absolute; left: 0px; top: 0px; z-index: 3; width: 100%; transform-origin: 0px 0px 0px; transform: matrix(1, 0, 0, 1, 0, 0);"><div style="-webkit-transform: translateZ(0px); position: absolute; left: 0px; top: 0px; z-index: 104; width: 100%;"></div><div style="-webkit-transform: translateZ(0px); position: absolute; left: 0px; top: 0px; z-index: 105; width: 100%;"></div><div style="-webkit-transform: translateZ(0px); position: absolute; left: 0px; top: 0px; z-index: 106; width: 100%;"></div><div style="-webkit-transform: translateZ(0px); position: absolute; left: 0px; top: 0px; z-index: 107; width: 100%;"></div></div></div><div style="margin-left: 5px; margin-right: 5px; z-index: 1000000; position: absolute; left: 0px; bottom: 0px;"><a target="_blank" href="http://maps.google.com/maps?ll=41.878114,-87.629798&z=12&t=m&hl=en-US&gl=US&mapclient=apiv3" title="Click to see this area on Google Maps" style="position: static; overflow: visible; float: none; display: inline;"><div style="width: 62px; height: 26px; cursor: pointer;"><img src="./Chicago Calendar_files/google_white2_hdpi.png" draggable="false" style="position: absolute; left: 0px; top: 0px; width: 62px; height: 26px; -webkit-user-select: none; border: 0px; padding: 0px; margin: 0px;"></div></a></div><div class="gmnoprint" style="z-index: 1000001; position: absolute; right: 0px; bottom: 0px; width: 12px;"><div draggable="false" class="gm-style-cc" style="-webkit-user-select: none;"><div style="opacity: 0.7; width: 100%; height: 100%; position: absolute;"><div style="width: 1px;"></div><div style="width: auto; height: 100%; margin-left: 1px; background-color: rgb(245, 245, 245);"></div></div><div style="position: relative; padding-right: 6px; padding-left: 6px; font-family: Roboto, Arial, sans-serif; font-size: 10px; color: rgb(68, 68, 68); white-space: nowrap; direction: ltr; text-align: right;"><a style="color: rgb(68, 68, 68); text-decoration: none; cursor: pointer; display: none;">Map Data</a><span style="display: none;"></span></div></div></div><div style="padding: 15px 21px; border: 1px solid rgb(171, 171, 171); font-family: Roboto, Arial, sans-serif; color: rgb(34, 34, 34); -webkit-box-shadow: rgba(0, 0, 0, 0.2) 0px 4px 16px; box-shadow: rgba(0, 0, 0, 0.2) 0px 4px 16px; z-index: 10000002; display: none; width: 0px; height: 0px; position: absolute; left: 5px; top: 5px; background-color: white;"><div style="padding: 0px 0px 10px; font-size: 16px;">Map Data</div><div style="font-size: 13px;"></div><div style="width: 13px; height: 13px; overflow: hidden; position: absolute; opacity: 0.7; right: 12px; top: 12px; z-index: 10000; cursor: pointer;"><img src="./Chicago Calendar_files/mapcnt3.png" draggable="false" style="position: absolute; left: -2px; top: -336px; width: 59px; height: 492px; -webkit-user-select: none; border: 0px; padding: 0px; margin: 0px;"></div></div><div class="gmnoscreen" style="position: absolute; right: 0px; bottom: 0px;"><div style="font-family: Roboto, Arial, sans-serif; font-size: 11px; color: rgb(68, 68, 68); direction: ltr; text-align: right; background-color: rgb(245, 245, 245);"></div></div><div class="gmnoprint gm-style-cc" draggable="false" style="z-index: 1000001; position: absolute; -webkit-user-select: none; right: 0px; bottom: 0px;"><div style="opacity: 0.7; width: 100%; height: 100%; position: absolute;"><div style="width: 1px;"></div><div style="width: auto; height: 100%; margin-left: 1px; background-color: rgb(245, 245, 245);"></div></div><div style="position: relative; padding-right: 6px; padding-left: 6px; font-family: Roboto, Arial, sans-serif; font-size: 10px; color: rgb(68, 68, 68); white-space: nowrap; direction: ltr; text-align: right;"><a href="http://www.google.com/intl/en-US_US/help/terms_maps.html" target="_blank" style="text-decoration: none; cursor: pointer; color: rgb(68, 68, 68);">Terms of Use</a></div></div><div draggable="false" class="gm-style-cc" style="-webkit-user-select: none; display: none; position: absolute; right: 0px; bottom: 0px;"><div style="opacity: 0.7; width: 100%; height: 100%; position: absolute;"><div style="width: 1px;"></div><div style="width: auto; height: 100%; margin-left: 1px; background-color: rgb(245, 245, 245);"></div></div><div style="position: relative; padding-right: 6px; padding-left: 6px; font-family: Roboto, Arial, sans-serif; font-size: 10px; color: rgb(68, 68, 68); white-space: nowrap; direction: ltr; text-align: right;"><a target="_new" title="Report errors in the road map or imagery to Google" href="http://maps.google.com/maps?ll=41.878114,-87.629798&z=12&t=m&hl=en-US&gl=US&mapclient=apiv3&skstate=action:mps_dialog$apiref:1&output=classic" style="font-family: Roboto, Arial, sans-serif; font-size: 10px; color: rgb(68, 68, 68); text-decoration: none; position: relative;">Report a map error</a></div></div><div class="gmnoprint" draggable="false" controlwidth="32" controlheight="84" style="margin: 5px; -webkit-user-select: none; position: absolute; left: 0px; top: 0px;"><div controlwidth="32" controlheight="40" style="cursor: url(http://maps.gstatic.com/mapfiles/openhand_8_8.cur) 8 8, default; position: absolute; left: 0px; top: 0px;"><div style="width: 32px; height: 40px; overflow: hidden; position: absolute; left: 0px; top: 0px;"><img src="./Chicago Calendar_files/cb_scout2_hdpi.png" draggable="false" style="position: absolute; left: -9px; top: -102px; width: 1028px; height: 214px; -webkit-user-select: none; border: 0px; padding: 0px; margin: 0px;"></div><div style="width: 32px; height: 40px; overflow: hidden; position: absolute; left: 0px; top: 0px; visibility: hidden;"><img src="./Chicago Calendar_files/cb_scout2_hdpi.png" draggable="false" style="position: absolute; left: -107px; top: -102px; width: 1028px; height: 214px; -webkit-user-select: none; border: 0px; padding: 0px; margin: 0px;"></div><div style="width: 32px; height: 40px; overflow: hidden; position: absolute; left: 0px; top: 0px; visibility: hidden;"><img src="./Chicago Calendar_files/cb_scout2_hdpi.png" draggable="false" style="position: absolute; left: -58px; top: -102px; width: 1028px; height: 214px; -webkit-user-select: none; border: 0px; padding: 0px; margin: 0px;"></div><div style="width: 32px; height: 40px; overflow: hidden; position: absolute; left: 0px; top: 0px; visibility: hidden;"><img src="./Chicago Calendar_files/cb_scout2_hdpi.png" draggable="false" style="position: absolute; left: -205px; top: -102px; width: 1028px; height: 214px; -webkit-user-select: none; border: 0px; padding: 0px; margin: 0px;"></div></div><div class="gmnoprint" controlwidth="0" controlheight="0" style="opacity: 0.6; display: none; position: absolute;"><div title="Rotate map 90 degrees" style="width: 22px; height: 22px; overflow: hidden; position: absolute; cursor: pointer;"><img src="./Chicago Calendar_files/mapcnt3_hdpi.png" draggable="false" style="position: absolute; left: -38px; top: -360px; width: 59px; height: 492px; -webkit-user-select: none; border: 0px; padding: 0px; margin: 0px;"></div></div><div class="gmnoprint" controlwidth="20" controlheight="39" style="position: absolute; left: 6px; top: 45px;"><div style="width: 20px; height: 39px; overflow: hidden; position: absolute;"><img src="./Chicago Calendar_files/mapcnt3_hdpi.png" draggable="false" style="position: absolute; left: -39px; top: -401px; width: 59px; height: 492px; -webkit-user-select: none; border: 0px; padding: 0px; margin: 0px;"></div><div title="Zoom in" style="position: absolute; left: 0px; top: 2px; width: 20px; height: 17px; cursor: pointer;"></div><div title="Zoom out" style="position: absolute; left: 0px; top: 19px; width: 20px; height: 17px; cursor: pointer;"></div></div></div><div id="maptype" class="gmnoprint gm-style-mtc" style="margin: 5px; z-index: 0; position: absolute; cursor: pointer; text-align: left; width: 85px; right: 0px; top: 0px;"><div draggable="false" title="Change map style" style="direction: ltr; overflow: hidden; text-align: left; position: relative; color: rgb(0, 0, 0); font-family: Roboto, Arial, sans-serif; -webkit-user-select: none; font-size: 11px; padding: 1px 6px; border-bottom-left-radius: 2px; border-top-left-radius: 2px; border-bottom-right-radius: 2px; border-top-right-radius: 2px; -webkit-background-clip: padding-box; border: 1px solid rgba(0, 0, 0, 0.14902); -webkit-box-shadow: rgba(0, 0, 0, 0.298039) 0px 1px 4px -1px; box-shadow: rgba(0, 0, 0, 0.298039) 0px 1px 4px -1px; font-weight: 500; background-color: rgb(255, 255, 255); background-clip: padding-box;">Map<img src="./Chicago Calendar_files/arrow-down.png" draggable="false" style="-webkit-user-select: none; border: 0px; padding: 0px; margin: -2px 0px 0px; position: absolute; right: 6px; top: 50%; width: 7px; height: 4px;"></div><div style="z-index: -1; padding-top: 2px; -webkit-background-clip: padding-box; border-width: 0px 1px 1px; border-right-style: solid; border-bottom-style: solid; border-left-style: solid; border-right-color: rgba(0, 0, 0, 0.14902); border-bottom-color: rgba(0, 0, 0, 0.14902); border-left-color: rgba(0, 0, 0, 0.14902); -webkit-box-shadow: rgba(0, 0, 0, 0.298039) 0px 1px 4px -1px; box-shadow: rgba(0, 0, 0, 0.298039) 0px 1px 4px -1px; position: relative; text-align: left; display: none; background-color: white; background-clip: padding-box;"><div draggable="false" title="Show street map" style="color: black; font-family: Roboto, Arial, sans-serif; -webkit-user-select: none; font-size: 11px; padding: 3px; font-weight: 500; background-color: rgb(255, 255, 255);">Map</div><div draggable="false" title="Show satellite imagery" style="color: black; font-family: Roboto, Arial, sans-serif; -webkit-user-select: none; font-size: 11px; padding: 3px; background-color: rgb(255, 255, 255);">Satellite</div><div style="margin: 1px 0px; border-top-width: 1px; border-top-style: solid; border-top-color: rgb(235, 235, 235);"></div><div draggable="false" title="Show street map with terrain" style="color: rgb(0, 0, 0); font-family: Roboto, Arial, sans-serif; -webkit-user-select: none; font-size: 11px; padding: 3px 8px 3px 3px; direction: ltr; text-align: left; white-space: nowrap; background-color: rgb(255, 255, 255);"><span role="checkbox" style="box-sizing: border-box; position: relative; line-height: 0; font-size: 0px; margin: 0px 5px 0px 0px; display: inline-block; border: 1px solid rgb(198, 198, 198); border-top-left-radius: 1px; border-top-right-radius: 1px; border-bottom-right-radius: 1px; border-bottom-left-radius: 1px; width: 13px; height: 13px; vertical-align: middle; background-color: rgb(255, 255, 255);"><div style="position: absolute; left: 1px; top: -2px; width: 13px; height: 11px; overflow: hidden; display: none;"><img src="./Chicago Calendar_files/imgs8.png" draggable="false" style="position: absolute; left: -52px; top: -44px; -webkit-user-select: none; border: 0px; padding: 0px; margin: 0px; width: 68px; height: 67px;"></div></span><label style="vertical-align: middle; cursor: pointer;">Terrain</label></div><div style="margin: 1px 0px; border-top-width: 1px; border-top-style: solid; border-top-color: rgb(235, 235, 235); display: none;"></div><div draggable="false" title="Zoom in to show 45 degree view" style="color: rgb(184, 184, 184); font-family: Roboto, Arial, sans-serif; -webkit-user-select: none; font-size: 11px; padding: 3px 8px 3px 3px; direction: ltr; text-align: left; white-space: nowrap; display: none; background-color: rgb(255, 255, 255);"><span role="checkbox" style="box-sizing: border-box; position: relative; line-height: 0; font-size: 0px; margin: 0px 5px 0px 0px; display: inline-block; border: 1px solid rgb(241, 241, 241); border-top-left-radius: 1px; border-top-right-radius: 1px; border-bottom-right-radius: 1px; border-bottom-left-radius: 1px; width: 13px; height: 13px; vertical-align: middle; background-color: rgb(255, 255, 255);"><div style="position: absolute; left: 1px; top: -2px; width: 13px; height: 11px; overflow: hidden; display: none;"><img src="./Chicago Calendar_files/imgs8.png" draggable="false" style="position: absolute; left: -52px; top: -44px; -webkit-user-select: none; border: 0px; padding: 0px; margin: 0px; width: 68px; height: 67px;"></div></span><label style="vertical-align: middle; cursor: pointer;">45°</label></div><div draggable="false" title="Show imagery with street names" style="color: rgb(0, 0, 0); font-family: Roboto, Arial, sans-serif; -webkit-user-select: none; font-size: 11px; padding: 3px 8px 3px 3px; direction: ltr; text-align: left; white-space: nowrap; display: none; background-color: rgb(255, 255, 255);"><span role="checkbox" style="box-sizing: border-box; position: relative; line-height: 0; font-size: 0px; margin: 0px 5px 0px 0px; display: inline-block; border: 1px solid rgb(198, 198, 198); border-top-left-radius: 1px; border-top-right-radius: 1px; border-bottom-right-radius: 1px; border-bottom-left-radius: 1px; width: 13px; height: 13px; vertical-align: middle; background-color: rgb(255, 255, 255);"><div style="position: absolute; left: 1px; top: -2px; width: 13px; height: 11px; overflow: hidden;"><img src="./Chicago Calendar_files/imgs8.png" draggable="false" style="position: absolute; left: -52px; top: -44px; -webkit-user-select: none; border: 0px; padding: 0px; margin: 0px; width: 68px; height: 67px;"></div></span><label style="vertical-align: middle; cursor: pointer;">Labels</label></div></div></div></div></div>
+</div>
+
+		<div class="view-type hidden  ">
+	<div class="row text-center">
+		<h2>Hank Williams: Lost Highway</h2>
+		<h4 id="event-date" class="hidden">2014-08-01</h4>
+		<hr>
+	</div>
+	<div class="row">
+		<div class="col-md-6">
+			<div class="">
+				<div class="event-map-large" style="position: relative; overflow: hidden; -webkit-transform: translateZ(0px); background-color: rgb(229, 227, 223);"><div class="gm-style" style="position: absolute; left: 0px; top: 0px; overflow: hidden; width: 100%; height: 100%; z-index: 0;"><div style="position: absolute; left: 0px; top: 0px; overflow: hidden; width: 100%; height: 100%; z-index: 0; cursor: url(http://maps.gstatic.com/mapfiles/openhand_8_8.cur) 8 8, default;"><div style="position: absolute; left: 0px; top: 0px; z-index: 1; width: 100%; transform-origin: 0px 0px 0px; transform: matrix(1, 0, 0, 1, 0, 0);"><div style="-webkit-transform: translateZ(0px); position: absolute; left: 0px; top: 0px; z-index: 100; width: 100%;"><div style="position: absolute; left: 0px; top: 0px; z-index: 0;"><div style="position: absolute; left: 0px; top: 0px; z-index: 1;"><div style="width: 256px; height: 256px; -webkit-transform: translateZ(0px); position: absolute; left: -297px; top: -183px;"></div><div style="width: 256px; height: 256px; -webkit-transform: translateZ(0px); position: absolute; left: -41px; top: -183px;"></div></div></div></div><div style="-webkit-transform: translateZ(0px); position: absolute; left: 0px; top: 0px; z-index: 101; width: 100%;"></div><div style="-webkit-transform: translateZ(0px); position: absolute; left: 0px; top: 0px; z-index: 102; width: 100%;"></div><div style="-webkit-transform: translateZ(0px); position: absolute; left: 0px; top: 0px; z-index: 103; width: 100%;"><div style="position: absolute; left: 0px; top: 0px; z-index: -1;"><div style="position: absolute; left: 0px; top: 0px; z-index: 1;"><div style="width: 256px; height: 256px; overflow: hidden; -webkit-transform: translateZ(0px); position: absolute; left: -297px; top: -183px;"></div><div style="width: 256px; height: 256px; overflow: hidden; -webkit-transform: translateZ(0px); position: absolute; left: -41px; top: -183px;"><canvas draggable="false" height="512" width="512" style="-webkit-user-select: none; position: absolute; left: 0px; top: 0px; height: 256px; width: 256px;"></canvas></div></div></div></div><div style="position: absolute; z-index: 0; left: 0px; top: 0px;"><div style="overflow: hidden;"></div></div><div style="position: absolute; left: 0px; top: 0px; z-index: 0;"><div style="position: absolute; left: 0px; top: 0px; z-index: 1;"><div style="width: 256px; height: 256px; -webkit-transform: translateZ(0px); position: absolute; left: -297px; top: -183px; opacity: 1; transition: opacity 200ms ease-out; -webkit-transition: opacity 200ms ease-out;"><img src="./Chicago Calendar_files/vt(4)" draggable="false" style="width: 256px; height: 256px; -webkit-user-select: none; border: 0px; padding: 0px; margin: 0px; -webkit-transform: translateZ(0px);"></div><div style="width: 256px; height: 256px; -webkit-transform: translateZ(0px); position: absolute; left: -41px; top: -183px; opacity: 1; transition: opacity 200ms ease-out; -webkit-transition: opacity 200ms ease-out;"><img src="./Chicago Calendar_files/vt(5)" draggable="false" style="width: 256px; height: 256px; -webkit-user-select: none; border: 0px; padding: 0px; margin: 0px; -webkit-transform: translateZ(0px);"></div></div></div></div><div style="position: absolute; left: 0px; top: 0px; z-index: 2; width: 100%; height: 100%;"></div><div style="position: absolute; left: 0px; top: 0px; z-index: 3; width: 100%; transform-origin: 0px 0px 0px; transform: matrix(1, 0, 0, 1, 0, 0);"><div style="-webkit-transform: translateZ(0px); position: absolute; left: 0px; top: 0px; z-index: 104; width: 100%;"></div><div style="-webkit-transform: translateZ(0px); position: absolute; left: 0px; top: 0px; z-index: 105; width: 100%;"></div><div style="-webkit-transform: translateZ(0px); position: absolute; left: 0px; top: 0px; z-index: 106; width: 100%;"></div><div style="-webkit-transform: translateZ(0px); position: absolute; left: 0px; top: 0px; z-index: 107; width: 100%;"></div></div></div><div style="margin-left: 5px; margin-right: 5px; z-index: 1000000; position: absolute; left: 0px; bottom: 0px;"><a target="_blank" href="http://maps.google.com/maps?ll=41.923318,-87.645368&z=14&t=m&hl=en-US&gl=US&mapclient=apiv3" title="Click to see this area on Google Maps" style="position: static; overflow: visible; float: none; display: inline;"><div style="width: 62px; height: 26px; cursor: pointer;"><img src="./Chicago Calendar_files/google_white2_hdpi.png" draggable="false" style="position: absolute; left: 0px; top: 0px; width: 62px; height: 26px; -webkit-user-select: none; border: 0px; padding: 0px; margin: 0px;"></div></a></div><div class="gmnoprint" style="z-index: 1000001; position: absolute; right: 0px; bottom: 0px; width: 12px;"><div draggable="false" class="gm-style-cc" style="-webkit-user-select: none;"><div style="opacity: 0.7; width: 100%; height: 100%; position: absolute;"><div style="width: 1px;"></div><div style="width: auto; height: 100%; margin-left: 1px; background-color: rgb(245, 245, 245);"></div></div><div style="position: relative; padding-right: 6px; padding-left: 6px; font-family: Roboto, Arial, sans-serif; font-size: 10px; color: rgb(68, 68, 68); white-space: nowrap; direction: ltr; text-align: right;"><a style="color: rgb(68, 68, 68); text-decoration: none; cursor: pointer; display: none;">Map Data</a><span style="display: none;"></span></div></div></div><div style="padding: 15px 21px; border: 1px solid rgb(171, 171, 171); font-family: Roboto, Arial, sans-serif; color: rgb(34, 34, 34); -webkit-box-shadow: rgba(0, 0, 0, 0.2) 0px 4px 16px; box-shadow: rgba(0, 0, 0, 0.2) 0px 4px 16px; z-index: 10000002; display: none; width: 0px; height: 0px; position: absolute; left: 5px; top: 5px; background-color: white;"><div style="padding: 0px 0px 10px; font-size: 16px;">Map Data</div><div style="font-size: 13px;"></div><div style="width: 13px; height: 13px; overflow: hidden; position: absolute; opacity: 0.7; right: 12px; top: 12px; z-index: 10000; cursor: pointer;"><img src="./Chicago Calendar_files/mapcnt3.png" draggable="false" style="position: absolute; left: -2px; top: -336px; width: 59px; height: 492px; -webkit-user-select: none; border: 0px; padding: 0px; margin: 0px;"></div></div><div class="gmnoscreen" style="position: absolute; right: 0px; bottom: 0px;"><div style="font-family: Roboto, Arial, sans-serif; font-size: 11px; color: rgb(68, 68, 68); direction: ltr; text-align: right; background-color: rgb(245, 245, 245);"></div></div><div class="gmnoprint gm-style-cc" draggable="false" style="z-index: 1000001; position: absolute; -webkit-user-select: none; right: 0px; bottom: 0px;"><div style="opacity: 0.7; width: 100%; height: 100%; position: absolute;"><div style="width: 1px;"></div><div style="width: auto; height: 100%; margin-left: 1px; background-color: rgb(245, 245, 245);"></div></div><div style="position: relative; padding-right: 6px; padding-left: 6px; font-family: Roboto, Arial, sans-serif; font-size: 10px; color: rgb(68, 68, 68); white-space: nowrap; direction: ltr; text-align: right;"><a href="http://www.google.com/intl/en-US_US/help/terms_maps.html" target="_blank" style="text-decoration: none; cursor: pointer; color: rgb(68, 68, 68);">Terms of Use</a></div></div><div draggable="false" class="gm-style-cc" style="-webkit-user-select: none; display: none; position: absolute; right: 0px; bottom: 0px;"><div style="opacity: 0.7; width: 100%; height: 100%; position: absolute;"><div style="width: 1px;"></div><div style="width: auto; height: 100%; margin-left: 1px; background-color: rgb(245, 245, 245);"></div></div><div style="position: relative; padding-right: 6px; padding-left: 6px; font-family: Roboto, Arial, sans-serif; font-size: 10px; color: rgb(68, 68, 68); white-space: nowrap; direction: ltr; text-align: right;"><a target="_new" title="Report errors in the road map or imagery to Google" href="http://maps.google.com/maps?ll=41.923318,-87.645368&z=14&t=m&hl=en-US&gl=US&mapclient=apiv3&skstate=action:mps_dialog$apiref:1&output=classic" style="font-family: Roboto, Arial, sans-serif; font-size: 10px; color: rgb(68, 68, 68); text-decoration: none; position: relative;">Report a map error</a></div></div><div class="gmnoprint" draggable="false" controlwidth="32" controlheight="84" style="margin: 5px; -webkit-user-select: none; position: absolute; left: 0px; top: 0px;"><div controlwidth="32" controlheight="40" style="cursor: url(http://maps.gstatic.com/mapfiles/openhand_8_8.cur) 8 8, default; position: absolute; left: 0px; top: 0px;"><div style="width: 32px; height: 40px; overflow: hidden; position: absolute; left: 0px; top: 0px;"><img src="./Chicago Calendar_files/cb_scout2_hdpi.png" draggable="false" style="position: absolute; left: -9px; top: -102px; width: 1028px; height: 214px; -webkit-user-select: none; border: 0px; padding: 0px; margin: 0px;"></div><div style="width: 32px; height: 40px; overflow: hidden; position: absolute; left: 0px; top: 0px; visibility: hidden;"><img src="./Chicago Calendar_files/cb_scout2_hdpi.png" draggable="false" style="position: absolute; left: -107px; top: -102px; width: 1028px; height: 214px; -webkit-user-select: none; border: 0px; padding: 0px; margin: 0px;"></div><div style="width: 32px; height: 40px; overflow: hidden; position: absolute; left: 0px; top: 0px; visibility: hidden;"><img src="./Chicago Calendar_files/cb_scout2_hdpi.png" draggable="false" style="position: absolute; left: -58px; top: -102px; width: 1028px; height: 214px; -webkit-user-select: none; border: 0px; padding: 0px; margin: 0px;"></div><div style="width: 32px; height: 40px; overflow: hidden; position: absolute; left: 0px; top: 0px; visibility: hidden;"><img src="./Chicago Calendar_files/cb_scout2_hdpi.png" draggable="false" style="position: absolute; left: -205px; top: -102px; width: 1028px; height: 214px; -webkit-user-select: none; border: 0px; padding: 0px; margin: 0px;"></div></div><div class="gmnoprint" controlwidth="0" controlheight="0" style="opacity: 0.6; display: none; position: absolute;"><div title="Rotate map 90 degrees" style="width: 22px; height: 22px; overflow: hidden; position: absolute; cursor: pointer;"><img src="./Chicago Calendar_files/mapcnt3_hdpi.png" draggable="false" style="position: absolute; left: -38px; top: -360px; width: 59px; height: 492px; -webkit-user-select: none; border: 0px; padding: 0px; margin: 0px;"></div></div><div class="gmnoprint" controlwidth="20" controlheight="39" style="position: absolute; left: 6px; top: 45px;"><div style="width: 20px; height: 39px; overflow: hidden; position: absolute;"><img src="./Chicago Calendar_files/mapcnt3_hdpi.png" draggable="false" style="position: absolute; left: -39px; top: -401px; width: 59px; height: 492px; -webkit-user-select: none; border: 0px; padding: 0px; margin: 0px;"></div><div title="Zoom in" style="position: absolute; left: 0px; top: 2px; width: 20px; height: 17px; cursor: pointer;"></div><div title="Zoom out" style="position: absolute; left: 0px; top: 19px; width: 20px; height: 17px; cursor: pointer;"></div></div></div><div id="maptype" class="gmnoprint gm-style-mtc" style="margin: 5px; z-index: 0; position: absolute; cursor: pointer; text-align: left; width: 85px; right: 0px; top: 0px;"><div draggable="false" title="Change map style" style="direction: ltr; overflow: hidden; text-align: left; position: relative; color: rgb(0, 0, 0); font-family: Roboto, Arial, sans-serif; -webkit-user-select: none; font-size: 11px; padding: 1px 6px; border-bottom-left-radius: 2px; border-top-left-radius: 2px; border-bottom-right-radius: 2px; border-top-right-radius: 2px; -webkit-background-clip: padding-box; border: 1px solid rgba(0, 0, 0, 0.14902); -webkit-box-shadow: rgba(0, 0, 0, 0.298039) 0px 1px 4px -1px; box-shadow: rgba(0, 0, 0, 0.298039) 0px 1px 4px -1px; font-weight: 500; background-color: rgb(255, 255, 255); background-clip: padding-box;">Map<img src="./Chicago Calendar_files/arrow-down.png" draggable="false" style="-webkit-user-select: none; border: 0px; padding: 0px; margin: -2px 0px 0px; position: absolute; right: 6px; top: 50%; width: 7px; height: 4px;"></div><div style="z-index: -1; padding-top: 2px; -webkit-background-clip: padding-box; border-width: 0px 1px 1px; border-right-style: solid; border-bottom-style: solid; border-left-style: solid; border-right-color: rgba(0, 0, 0, 0.14902); border-bottom-color: rgba(0, 0, 0, 0.14902); border-left-color: rgba(0, 0, 0, 0.14902); -webkit-box-shadow: rgba(0, 0, 0, 0.298039) 0px 1px 4px -1px; box-shadow: rgba(0, 0, 0, 0.298039) 0px 1px 4px -1px; position: relative; text-align: left; display: none; background-color: white; background-clip: padding-box;"><div draggable="false" title="Show street map" style="color: black; font-family: Roboto, Arial, sans-serif; -webkit-user-select: none; font-size: 11px; padding: 3px; font-weight: 500; background-color: rgb(255, 255, 255);">Map</div><div draggable="false" title="Show satellite imagery" style="color: black; font-family: Roboto, Arial, sans-serif; -webkit-user-select: none; font-size: 11px; padding: 3px; background-color: rgb(255, 255, 255);">Satellite</div><div style="margin: 1px 0px; border-top-width: 1px; border-top-style: solid; border-top-color: rgb(235, 235, 235);"></div><div draggable="false" title="Show street map with terrain" style="color: rgb(0, 0, 0); font-family: Roboto, Arial, sans-serif; -webkit-user-select: none; font-size: 11px; padding: 3px 8px 3px 3px; direction: ltr; text-align: left; white-space: nowrap; background-color: rgb(255, 255, 255);"><span role="checkbox" style="box-sizing: border-box; position: relative; line-height: 0; font-size: 0px; margin: 0px 5px 0px 0px; display: inline-block; border: 1px solid rgb(198, 198, 198); border-top-left-radius: 1px; border-top-right-radius: 1px; border-bottom-right-radius: 1px; border-bottom-left-radius: 1px; width: 13px; height: 13px; vertical-align: middle; background-color: rgb(255, 255, 255);"><div style="position: absolute; left: 1px; top: -2px; width: 13px; height: 11px; overflow: hidden; display: none;"><img src="./Chicago Calendar_files/imgs8.png" draggable="false" style="position: absolute; left: -52px; top: -44px; -webkit-user-select: none; border: 0px; padding: 0px; margin: 0px; width: 68px; height: 67px;"></div></span><label style="vertical-align: middle; cursor: pointer;">Terrain</label></div><div style="margin: 1px 0px; border-top-width: 1px; border-top-style: solid; border-top-color: rgb(235, 235, 235); display: none;"></div><div draggable="false" title="Zoom in to show 45 degree view" style="color: rgb(184, 184, 184); font-family: Roboto, Arial, sans-serif; -webkit-user-select: none; font-size: 11px; padding: 3px 8px 3px 3px; direction: ltr; text-align: left; white-space: nowrap; display: none; background-color: rgb(255, 255, 255);"><span role="checkbox" style="box-sizing: border-box; position: relative; line-height: 0; font-size: 0px; margin: 0px 5px 0px 0px; display: inline-block; border: 1px solid rgb(241, 241, 241); border-top-left-radius: 1px; border-top-right-radius: 1px; border-bottom-right-radius: 1px; border-bottom-left-radius: 1px; width: 13px; height: 13px; vertical-align: middle; background-color: rgb(255, 255, 255);"><div style="position: absolute; left: 1px; top: -2px; width: 13px; height: 11px; overflow: hidden; display: none;"><img src="./Chicago Calendar_files/imgs8.png" draggable="false" style="position: absolute; left: -52px; top: -44px; -webkit-user-select: none; border: 0px; padding: 0px; margin: 0px; width: 68px; height: 67px;"></div></span><label style="vertical-align: middle; cursor: pointer;">45°</label></div><div draggable="false" title="Show imagery with street names" style="color: rgb(0, 0, 0); font-family: Roboto, Arial, sans-serif; -webkit-user-select: none; font-size: 11px; padding: 3px 8px 3px 3px; direction: ltr; text-align: left; white-space: nowrap; display: none; background-color: rgb(255, 255, 255);"><span role="checkbox" style="box-sizing: border-box; position: relative; line-height: 0; font-size: 0px; margin: 0px 5px 0px 0px; display: inline-block; border: 1px solid rgb(198, 198, 198); border-top-left-radius: 1px; border-top-right-radius: 1px; border-bottom-right-radius: 1px; border-bottom-left-radius: 1px; width: 13px; height: 13px; vertical-align: middle; background-color: rgb(255, 255, 255);"><div style="position: absolute; left: 1px; top: -2px; width: 13px; height: 11px; overflow: hidden;"><img src="./Chicago Calendar_files/imgs8.png" draggable="false" style="position: absolute; left: -52px; top: -44px; -webkit-user-select: none; border: 0px; padding: 0px; margin: 0px; width: 68px; height: 67px;"></div></span><label style="vertical-align: middle; cursor: pointer;">Labels</label></div></div></div></div></div>
+			</div>
+		</div>
+
+		<div class="col-md-6">
+			<p></p><p id="titleP"><strong class="detailhead">Hank Williams: Lost Highway</strong>
+                        </p>
+<p class="bblue" id="theatreName">
+                          <a href="http://www.theatreinchicago.com/theatredetail.php?theatreID=47">                           The Greenhouse Theater Center                          </a>                          <br>
+                        2257 N Lincoln Avenue Chicago </p><p class="detailBody">Follow legendary country singer-songwriter Hank Williams on his lonesome journey from backwoods Alabama to superstardom at the Grand Ole Opry in this song-filled tribute from American Blues Theater. This unforgettable show, which was an off-Broadway hit nominated for three Outer Critics Circle Awards, features over 20 Hank Williams hits including "I'm So Lonesome I Could Cry," "Move It on Over," "Jambalaya" and "Hey, Good Lookin'." Charting the rise and fall of the country music icon through song, Hank Williams: Lost Highway highlights Williams' undeniable musical talent and songwriting abilities, and explores the alcohol and drug problems that ultimately got the better of him. This production features a talented cast of performers who have performed on Broadway and beyond, and is staged by the same artistic team behind the 2007 hit production of Oklahoma!</p><p class="detailBody">Price: $29-$49</p><p class="detailBody">Show Type: Musical</p><p class="detailBody">Box Office: 773-404-7336</p><table width="412" border="0" cellspacing="0" cellpadding="0" class="daysTable" align="left" style="clear:left">
+                                                      <tbody><tr>
+                              <td class="detailbody style1" width="100" nowrap="">Wed,  Aug 27:</td>
+                              <td align="left" class="detailbody">7:30pm</td>
+                            </tr>
+                                                        <tr>
+                              <td class="detailbody style1" width="100" nowrap="">Thu,  Aug 28:</td>
+                              <td align="left" class="detailbody">7:30pm</td>
+                            </tr>
+                                                        <tr>
+                              <td class="detailbody style1" width="100" nowrap="">Fri,  Aug 29:</td>
+                              <td align="left" class="detailbody">7:30pm</td>
+                            </tr>
+                                                        <tr>
+                              <td class="detailbody style1" width="100" nowrap="">Sat,  Aug 30:</td>
+                              <td align="left" class="detailbody">7:30pm</td>
+                            </tr>
+                                                        <tr>
+                              <td class="detailbody style1" width="100" nowrap="">Sun,  Aug 31:</td>
+                              <td align="left" class="detailbody">2:30pm</td>
+                            </tr>
+                                                        <tr>
+                              <td class="detailbody style1" width="100" nowrap="">Wed,  Sep 3:</td>
+                              <td align="left" class="detailbody">7:30pm</td>
+                            </tr>
+                                                        <tr>
+                              <td class="detailbody style1" width="100" nowrap="">Thu,  Sep 4:</td>
+                              <td align="left" class="detailbody">7:30pm</td>
+                            </tr>
+                                                        <tr>
+                              <td class="detailbody style1" width="100" nowrap="">Fri,  Sep 5:</td>
+                              <td align="left" class="detailbody">7:30pm</td>
+                            </tr>
+                                                        <tr>
+                              <td class="detailbody style1" width="100" nowrap="">Sat,  Sep 6:</td>
+                              <td align="left" class="detailbody">7:30pm</td>
+                            </tr>
+                                                        <tr>
+                              <td class="detailbody style1" width="100" nowrap="">Sun,  Sep 7:</td>
+                              <td align="left" class="detailbody">2:30pm</td>
+                            </tr>
+                                                        <tr>
+                              <td class="detailbody style1" width="100" nowrap="">Wed,  Sep 10:</td>
+                              <td align="left" class="detailbody">2:00pm</td>
+                            </tr>
+                                                        <tr>
+                              <td class="detailbody style1" width="100" nowrap="">Thu,  Sep 11:</td>
+                              <td align="left" class="detailbody">7:30pm</td>
+                            </tr>
+                                                        <tr>
+                              <td class="detailbody style1" width="100" nowrap="">Fri,  Sep 12:</td>
+                              <td align="left" class="detailbody">7:30pm</td>
+                            </tr>
+                                                        <tr>
+                              <td class="detailbody style1" width="100" nowrap="">Sat,  Sep 13:</td>
+                              <td align="left" class="detailbody">7:30pm</td>
+                            </tr>
+                                                        <tr>
+                              <td class="detailbody style1" width="100" nowrap="">Sun,  Sep 14:</td>
+                              <td align="left" class="detailbody">2:30pm</td>
+                            </tr>
+                                                        <tr>
+                              <td class="detailbody style1" width="100" nowrap="">Wed,  Sep 17:</td>
+                              <td align="left" class="detailbody">2:00pm</td>
+                            </tr>
+                                                        <tr>
+                              <td class="detailbody style1" width="100" nowrap="">Thu,  Sep 18:</td>
+                              <td align="left" class="detailbody">7:30pm</td>
+                            </tr>
+                                                        <tr>
+                              <td class="detailbody style1" width="100" nowrap="">Fri,  Sep 19:</td>
+                              <td align="left" class="detailbody">7:30pm</td>
+                            </tr>
+                                                        <tr>
+                              <td class="detailbody style1" width="100" nowrap="">Sat,  Sep 20:</td>
+                              <td align="left" class="detailbody">7:30pm</td>
+                            </tr>
+                                                        <tr>
+                              <td class="detailbody style1" width="100" nowrap="">Sun,  Sep 21:</td>
+                              <td align="left" class="detailbody">2:30pm</td>
+                            </tr>
+                                                        <tr>
+                              <td class="detailbody style1" width="100" nowrap="">Wed,  Sep 24:</td>
+                              <td align="left" class="detailbody">7:30pm</td>
+                            </tr>
+                                                        <tr>
+                              <td class="detailbody style1" width="100" nowrap="">Thu,  Sep 25:</td>
+                              <td align="left" class="detailbody">7:30pm</td>
+                            </tr>
+                                                        <tr>
+                              <td class="detailbody style1" width="100" nowrap="">Fri,  Sep 26:</td>
+                              <td align="left" class="detailbody">7:30pm</td>
+                            </tr>
+                                                        <tr>
+                              <td class="detailbody style1" width="100" nowrap="">Sat,  Sep 27:</td>
+                              <td align="left" class="detailbody">7:30pm</td>
+                            </tr>
+                                                        <tr>
+                              <td class="detailbody style1" width="100" nowrap="">Sun,  Sep 28:</td>
+                              <td align="left" class="detailbody">2:30pm</td>
+                            </tr>
+                                                      <tr>
+                            <td colspan="2"></td>
+                          </tr>
+                        </tbody></table><p></p>
+		</div>
+	</div>
+</div>
+
+ 		</div>
+ 	</div>
+    <div class="col-md-3 about-column">
+		<div class="about-box view-type selected affix-top" data-spy="affix" data-offset-top="75" style="display: block;">
+    <div class="about-box-header">
+      <div class="event-title vcenter"></div>
+    </div>
+
+    <img class="event-map">
+    
+
+    <div class="about-box-desc">
+      <div class="about-box-time">
+        <span class="event-time">
+      </span></div>
+      <br>
+      <span class="event-desc"></span>
+      <div class="about-box-date">
+        <span class="event-date">
+      </span></div>
+
+    </div>
+    <div class="about-box-more">
+        <a class="btn btn-default event-url" href="">More Info: </a>
+        <a class="btn btn-info event-enrollment" href="">I'm Going!</a>
+    </div>
+</div>
+		<div class="about-box view-type hidden  " data-spy="affix" data-offset-top="75">
+    <div class="about-box-header">
+      <div class="event-title vcenter"></div>
+    </div>
+
+    <div class="event-icon"><time datetime="2014-08-01" class="icon"> <em>Friday</em> <strong>August</strong> <span>01</span> </time></div>
+    
+
+    <div class="about-box-desc">
+      <div class="about-box-time">
+        <span class="event-time">
+      </span></div>
+      <br>
+      <span class="event-desc"></span>
+      <div class="about-box-date">
+        <span class="event-date">
+      </span></div>
+
+    </div>
+    <div class="about-box-more">
+        <a class="btn btn-default event-url" href="">More Info: </a>
+        <a class="btn btn-info event-enrollment" href="">I'm Going!</a>
+    </div>
+</div>
+		<div class="about-box view-type hidden   " data-spy="affix" data-offset-top="75">
+	<div class="hidden event-lat">41.923318</div>
+	<div class="hidden event-lng">-87.645368</div>
+	<div class="about-box-header">
+	  <div class="event-title vcenter"></div>
+	</div>
+
+	<div class="event-icon"><time datetime="2014-08-01" class="icon"> <em>Friday</em> <strong>August</strong> <span>01</span> </time></div>
+ 
+</div>
+	</div>
+ </div>
+</div>
+    </main>
+       <div class="row footer">
+
+<div class="container">
+<h2>footer</h2>
+<h2>footer</h2>
+<h2>footer</h2>
+<h2>footer</h2>
+<h2>footer</h2>
+
+</div>
+
+
+</div>
+  
+
+</body></html>

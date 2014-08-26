@@ -1,0 +1,21 @@
+<div class="view-type hidden <%= @view == 'event' ? 'selected' : '' %> ">
+	<div class="row text-center">
+		<h2><%= @event.title %></h2>
+		<h4 id="event-date" class="hidden"><%= @date %></h4>
+		<h4 id="event-lat" class="hidden"><%= @event.lat %></h4>
+		<h4 id="event-lng" class="hidden"><%= @event.lng %></h4>
+		<hr>
+	</div>
+	<div class="row">
+		<div class="col-md-6">
+			<div class="">
+				<div class="event-map-large">
+				</div>
+			</div>
+		</div>
+
+		<div class="col-md-6">
+			<p><%= @event.desc.html_safe%></p>
+		</div>
+	</div>
+</div>

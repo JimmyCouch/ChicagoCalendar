@@ -1,0 +1,5 @@
+<h2 id="month">
+  <%= link_to "<", :date => (@date.beginning_of_month-1), :view => params[:view] %>
+  <span id="current_date"><%=h @date.strftime("%B %Y") %></span>
+  <%= link_to ">", :date => (@date.end_of_month+1), :view => params[:view] %>
+</h2>

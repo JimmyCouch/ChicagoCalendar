@@ -5,4 +5,12 @@ class VisitorsController < ApplicationController
 		@events = Event.all
 	end
 
+
+	def add_event_to_user
+
+		# current_user.events.new
+
+
+	end
+
 end

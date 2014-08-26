@@ -1,5 +1,9 @@
 source 'https://rubygems.org'
 ruby '2.1.2'
+gem 'omniauth-facebook'
+gem 'mustache-js-rails'
+gem 'underscore-rails'
+gem 'gmaps4rails'
 gem "capybara-webkit"
 gem 'font-awesome-sass'
 gem "twitter-bootstrap-rails"

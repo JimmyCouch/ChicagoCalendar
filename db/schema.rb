@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140814230558) do
+ActiveRecord::Schema.define(version: 20140826160619) do
 
   create_table "events", force: true do |t|
     t.datetime "created_at"
@@ -19,11 +19,12 @@ ActiveRecord::Schema.define(version: 20140814230558) do
     t.string   "title"
     t.string   "desc"
     t.string   "url"
-    t.datetime "date"
-    t.string   "time"
-    t.string   "month"
-    t.string   "year"
+    t.datetime "datetime"
     t.string   "img_url"
+    t.string   "address"
+    t.string   "lat"
+    t.string   "lng"
+    t.string   "source"
   end
 
   create_table "users", force: true do |t|
@@ -40,6 +41,9 @@ ActiveRecord::Schema.define(version: 20140814230558) do
     t.datetime "created_at"
     t.datetime "updated_at"
     t.string   "name"
+    t.string   "provider"
+    t.string   "uid"
+    t.string   "image"
   end
 
   add_index "users", ["email"], name: "index_users_on_email", unique: true

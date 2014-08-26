@@ -1,19 +1,20 @@
+<%= render 'calendar/calendar_header' %>
 <div class="container main-body" >
   <div class="row main-row">
     <div class="col-md-9 " >
 		<%= render "events/header" %>
     	<div class="row view-column" >
-	    <h2 id="month">
-	      <%= link_to "<", :date => (@date.beginning_of_month-1) %>
-	      <%=h @date.strftime("%B %Y") %>
-	      <%= link_to ">", :date => (@date.end_of_month+1) %>
-	    </h2>
 		<%= render "calendar/calendar" %>
 		<%= render "map/map" %>
+		<%= render "events/event" %>
+		<%= render "day/day" %>
  		</div>
  	</div>
     <div class="col-md-3 about-column">
-		<%= render "events/details" %>
+		<%= render "calendar/sidebar" %>
+		<%= render "map/sidebar" %>
+		<%= render "events/sidebar" %>
+		<%= render "day/sidebar" %>
 	</div>
  </div>
 </div>

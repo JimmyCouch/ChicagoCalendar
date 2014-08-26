@@ -1,0 +1,18 @@
+<div class="about-box view-type hidden <%= @view == 'day' ? 'selected' : '' %>  " data-spy="affix" data-offset-top="75">
+	<div class="hidden event-lat" ><%= @event.lat%></div>
+	<div class="hidden event-lng" ><%= @event.lng%></div>
+	<div class="about-box-header">
+	  <div class="event-title vcenter"></div>
+	</div>
+
+	<div class="event-icon">
+
+	</div>
+
+	<% if user_signed_in? %>
+		<%= render 'social/logged_in' %>
+	<% else %>
+		<%= render 'social/not_logged_in' %>
+	<% end %>
+ 
+</div>

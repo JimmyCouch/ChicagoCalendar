@@ -1,10 +1,13 @@
 
-  <div id="calendar" class="view-type hidden <%= @view == "calendar" ? 'selected' : '' %>">
+<div class="view-type hidden <%= @view == "calendar" ? 'selected' : '' %>">
+  <%= render 'layouts/month_nav' %>
+
+  <div id="calendar" >
     <%= calendar_for(@events, :year => @date.year, :month => @date.month) do |t| %>
       <%= t.head('Sunday','Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday') %>
-      <%= t.day(:day_method => :date ,:id => 'day_%d', :class => "calendar-day") do |day, events| %>
+      <%= t.day(:day_method => :datetime ,:id => 'day_%d', :class => "calendar-day") do |day, events| %>
         <div class="calendar-day-box">
-          <a href="?day=<%= day %>">
+          <a href="?view=day&date=<%= day %>">
             <div class="calendar-number"> <%= day.day %></div>
             <i class="fa fa-star" style="display:none;"></i>
           </a>
@@ -18,7 +21,25 @@
       <% end %>
     <% end %>
     </div>
+</div>
 
+
+
+<div class="modal fade" id="map-modal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+        <h4 class="modal-title" id="myModalLabel"></h4>
+      </div>
+        <div class="modal-map"></div>
+
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div>
 
 
 
