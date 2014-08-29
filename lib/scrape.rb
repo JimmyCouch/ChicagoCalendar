@@ -15,9 +15,9 @@ class Scrape
 
 		events_array = []
 
-		events_array << Scrape_theater_in_chicago.new(@date).parse
+		events_array << ScrapeTheaterInChicago.new(@date).parse
 
-		events_array << Scrape_choose_chicago.new(@date).parse
+		events_array << ScrapeChooseChicago.new(@date).parse
 
 		events_array
 	end

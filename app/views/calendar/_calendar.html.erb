@@ -9,13 +9,15 @@
         <div class="calendar-day-box">
           <a href="?view=day&date=<%= day %>">
             <div class="calendar-number"> <%= day.day %></div>
-            <i class="fa fa-star" style="display:none;"></i>
+            <div class="calendar-icon-box" style="display:none;">
+              <div class="calendar-icon" id="star-six" ></div>
+            </div>
           </a>
         </div>
         
         <ul>
         <% events.each do |event| %>
-          <li class="event-link" ><%= link_to h(event.title), event_path(event.id), :id => event.id %></li>
+          <div><li id="star-six-small" class="calendar-link-event"></li><span class="event-link "><%= link_to h(event.title), event_path(event.id), :id => event.id %></span></div>
         <% end %>
         </ul>
       <% end %>

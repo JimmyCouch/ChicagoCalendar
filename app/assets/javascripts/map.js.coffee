@@ -20,10 +20,19 @@ ready = ->
   month = $('#current_date').text()
   date = Date.parse(month).toString('yyyy-MM-dd')
 
-  $.ajax '/addresses?date=' + date,
+
+  if window.location.pathname == "/users/events"
+    url = "/user_addresses?date="
+  else
+    url = "/addresses?date="
+
+  $.ajax url + date,
     type: 'GET'
     dataType: 'json'
+    error: (jqXHR, textStatus, errorThrown) ->
+      alert errorThrown
     success: (data, textStatus, jqXHR) -> 
+      console.log "DATA: " + data
       events = data
       console.log events
       markers = []
@@ -45,6 +54,7 @@ ready = ->
     while x < markers.length
       marker = markers[x]
       google.maps.event.addListener marker, 'click', ->
+        $('.about-box.selected').fadeIn().removeClass('hidden');
         view = 
           title: @.event.title
           date: Date.parse(@.event.datetime).toString('dddd MMMM dd yyyy H:mm')

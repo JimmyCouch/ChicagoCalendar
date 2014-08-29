@@ -1,0 +1,16 @@
+<div class="about-box <%= @view == "calendar" ? 'selected' : '' %> "data-spy="affix" data-offset-top="75">
+
+  <div class="user-calendar-sidebar-header">
+    <h3>Your Calendar</h3>
+  </div>
+  <hr>
+  <div class="event-map">
+  </div>
+  <hr>
+  <div class="user-calendar-sidebar-body">
+    <%= link_to "Export to iCal", export_calendar_path(:format => :ics ), :class => "user-sidebar-button" %>
+    <hr>
+    <%= link_to "My Account", edit_user_registration_path, :class => "user-sidebar-button" %>
+  </div>
+
+</div>

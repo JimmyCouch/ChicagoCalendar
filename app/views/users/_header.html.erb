@@ -1,0 +1,20 @@
+<div class="row text-center options-row">
+    <%= link_to :date => @date, :view => "calendar" do %>
+      <div class="header-option vcenter">
+            <span class="glyphicon glyphicon-calendar"></span>
+      </div>
+    <% end %>
+
+    <%= link_to :date => @date, :view => "map" do %>
+      <div class="header-option vcenter">
+          <span class="glyphicon glyphicon-map-marker"></span>
+      </div>
+    <% end %>
+
+    <%= link_to :date => @date, :view => "day" do %>
+      <div class="header-option vcenter">
+        <span class="glyphicon glyphicon-th-large"></span>
+      </div>
+    <% end %>
+
+</div>

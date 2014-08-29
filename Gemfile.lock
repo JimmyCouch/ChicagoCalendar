@@ -28,6 +28,8 @@ GEM
       thread_safe (~> 0.1)
       tzinfo (~> 1.1)
     addressable (2.3.6)
+    animate-rails (1.0.7)
+      rails
     arel (5.0.1.20140414130214)
     bcrypt (3.1.7)
     better_errors (1.1.0)
@@ -109,6 +111,7 @@ GEM
     hike (1.2.3)
     hub (1.12.2)
     i18n (0.6.11)
+    icalendar (2.1.1)
     interception (0.5)
     jbuilder (2.1.3)
       activesupport (>= 3.0.0, < 5)
@@ -290,6 +293,7 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
+  animate-rails
   better_errors
   binding_of_caller
   bootstrap-sass
@@ -308,6 +312,7 @@ DEPENDENCIES
   guard-rails
   guard-rspec
   hub
+  icalendar
   jbuilder (~> 2.0)
   jquery-rails
   jquery-turbolinks

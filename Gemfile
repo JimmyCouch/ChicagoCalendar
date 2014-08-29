@@ -1,5 +1,7 @@
 source 'https://rubygems.org'
 ruby '2.1.2'
+gem 'icalendar'
+gem "animate-rails"
 gem 'omniauth-facebook'
 gem 'mustache-js-rails'
 gem 'underscore-rails'

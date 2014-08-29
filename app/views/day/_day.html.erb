@@ -1,13 +1,31 @@
 <div class="view-type hidden <%= @view == 'day' ? 'selected' : '' %> ">
 	<div class="row text-center">
-		<h2>Events happening on <%= @date %> </h2>
+		<h2>Events happening on <%= @date.strftime("%A %B #{@date.day.ordinalize}, %Y") %> </h2>
 		<hr>
 	</div>
-	<div class="row">
-		  <% @events.each do |event| %>
-		  	<div class="col-md-4 well">
-		    <li class="event-link" ><%= link_to h(event.title), event_path(event.id), :id => event.id %></li>
+	<div class="row" >
+	  <% @events.each_with_index do |event, index| %>
+	  	<div class="day-box">
+		  	<div class="col-md-4">
+		  		<div class="day-event" id="<%= event.id %>">
+	      			<div class="day-title">
+	      				<h4><%= event.title %></h4>
+	      			</div>
+          			<hr>
+          			<div class="day-about">
+          				<ul>
+	      					<li><p>Address: <%= event.address %></p></li>
+	      					<% @time = event.datetime.strftime("%r") %>
+	      					<% if event.datetime.seconds_since_midnight == 0.0 %>
+	      						<li>Time: All Day</li>
+	      					<% else %>
+	      						<li>Time: <%= @time %></li>
+	      					<% end %>
+          				</ul>
+          			</div>
+		    	</div>
 			</div>
-		  <% end %>
+		</div>
+	  <% end %>
 	</div>
 </div>

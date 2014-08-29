@@ -1,0 +1,24 @@
+
+<div class="view-type">
+  <%= render 'layouts/month_nav' %>
+
+  <div id="calendar" >
+    <%= calendar_for(@events, :year => @date.year, :month => @date.month) do |t| %>
+      <%= t.head('Sunday','Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday') %>
+      <%= t.day(:day_method => :datetime ,:id => 'day_%d', :class => "calendar-day") do |day, events| %>
+        <div class="calendar-day-box">
+          <a href="?view=day&date=<%= day %>">
+            <div class="calendar-number"> <%= day.day %></div>
+            <i class="fa fa-star" style="display:none;"></i>
+          </a>
+        </div>
+        
+        <ul>
+        <% events.each do |event| %>
+          <li class="event-link" ><%= link_to h(event.title), event_path(event.id), :id => event.id %></li>
+        <% end %>
+        </ul>
+      <% end %>
+    <% end %>
+    </div>
+</div>

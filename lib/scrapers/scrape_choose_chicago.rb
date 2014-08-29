@@ -46,7 +46,7 @@ class ScrapeChooseChicago
 	end
 
 	def get_coords(address)
-    	Googlehelper.resolve_coordinates(address)
+    	GoogleHelper.resolve_coordinates(address)
 	end
 
 

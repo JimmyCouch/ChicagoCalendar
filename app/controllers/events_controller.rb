@@ -24,6 +24,7 @@ class EventsController < ApplicationController
 			@events = Event.where(:datetime => @date.beginning_of_day..@date.end_of_day)
 		end
 
+
 	  end
 
 	  def today
@@ -39,6 +40,16 @@ class EventsController < ApplicationController
 	    @event = Event.find(params[:id])
 	    @date = Date.parse(@event.datetime.to_s)
 	    @view = "event"
+	    if user_signed_in?
+	    	if current_user.events.exists?(@event)
+	    		@has_event = true
+	    	else
+	    		@has_event = false
+	    	end
+	    else
+	    	@has_event = false
+	    end
+
 	    # respond_with @event 
 	    respond_to do |format|
 	      format.html { render 'index'}
