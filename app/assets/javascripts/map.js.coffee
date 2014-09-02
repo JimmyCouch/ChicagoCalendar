@@ -3,8 +3,6 @@
 ready = ->
   windowHeight = $(window).height()
   mapTop = $('#map').offset().top
-  console.log("H: "+ windowHeight)
-  console.log("M: "+mapTop)
   $('#map').height(windowHeight - mapTop - 20)
 
   infowindow = new google.maps.InfoWindow
@@ -32,9 +30,7 @@ ready = ->
     error: (jqXHR, textStatus, errorThrown) ->
       alert errorThrown
     success: (data, textStatus, jqXHR) -> 
-      console.log "DATA: " + data
       events = data
-      console.log events
       markers = []
       x = 0
       while x < events.length
@@ -83,7 +79,6 @@ class Sidebar
 
   render: ->
     raw_date = Date.parse(@event.datetime)
-    console.log "RAW DATE: " + raw_date
     view =
       date: raw_date.toString("yyyy-MM-dd")
       day: raw_date.toString("dddd")

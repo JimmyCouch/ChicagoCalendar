@@ -1,3 +1,64 @@
 // Place all the styles related to the events controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+
+
+.event-options {
+  padding-top: 20px;
+}
+
+.day-event {
+  padding: 8px;
+  height: 220px;
+  border: 2px solid #a5d6ef;
+  border-radius: 5px;
+}
+
+.day-event:hover {
+  border: 2px solid #D7F2FF;
+}
+
+.alert {
+  height: 50px;
+  border-radius: 0px;
+  border: none;
+  background-color: #a5d6ef;
+}
+
+.day-title {
+  text-align: center;
+}
+
+
+.day-about {
+  font-size: 12px;
+}
+
+.day-box .col-md-4 {
+  padding-top: 10px;
+}
+
+
+.day-box-button {
+  text-align: center;
+  font-family: 'Montserrat', Arial, Helvetica, sans-serif;
+  border: #fbfbfb solid 4px;
+  cursor:pointer;
+  float: right;
+  background-color: white;
+  color:#3498db;
+  width: 100%;
+  padding-top:8px;
+  padding-bottom:8px;
+  -webkit-transition: all 0.3s;
+  -moz-transition: all 0.3s;
+  transition: all 0.3s;
+  font-weight:700;
+
+  &:hover{
+    background-color: #3498db;
+    color: white;
+  }
+
+}

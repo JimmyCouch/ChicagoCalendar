@@ -1,0 +1,131 @@
+.about-box {
+  margin-top: 50px;
+  width: 250px;
+  border: 15px solid rgba(32, 32, 32, 0.67);
+  height: 550px;
+  background-color: #FFFFFF;
+}
+
+.about-box-header {
+  height: 50px;
+}
+
+.event-title {
+  padding-top: 10px;
+  text-align: center;
+  color: #000;
+  font-size: 20px;
+}
+
+.user-calendar-sidebar-header {
+  padding-top: 10px;
+  text-align: center;
+  color: #000;
+  font-size: 20px;
+}
+
+.event-map {
+  max-width: none;
+}
+
+.modal-map {
+  height: 500px;
+}
+
+.event-icon, .event-map {
+  margin: 5px auto;
+  height: 130px;
+  width: 130px;
+}
+
+.event-map-large {
+  height: 230px;
+  border: 1px solid black;
+  border-radius: 5px;
+}
+
+.about-box-more {
+  text-align: center;
+}
+
+.about-box-desc {
+  margin: 20px;
+}
+
+time {
+  .icon {
+    font-size: 1em; /* change icon size */
+    display: block;
+    position: relative;
+    width: 100%;
+    height: 100%;
+    background-color: #fff;
+    border-radius: 0.6em;
+    box-shadow: 0 1px 0 #bdbdbd, 0 2px 0 #fff, 0 3px 0 #bdbdbd, 0 4px 0 #fff, 0 5px 0 #bdbdbd, 0 0 0 1px #bdbdbd;
+    overflow: hidden;
+    -webkit-backface-visibility: hidden;
+    -webkit-transform: rotate(0deg) skewY(0deg);
+    -webkit-transform-origin: 50% 10%;
+    transform-origin: 50% 10%;
+    * {
+      display: block;
+      width: 100%;
+      font-size: 1em;
+      font-weight: bold;
+      font-style: normal;
+      text-align: center;
+    }
+    strong {
+      position: absolute;
+      top: 0;
+      padding: 0.4em 0;
+      color: #fff;
+      background-color: #fd9f1b;
+      border-bottom: 1px dashed #f37302;
+      box-shadow: 0 2px 0 #fd9f1b;
+    }
+    em {
+      position: absolute;
+      bottom: 0.3em;
+      color: #fd9f1b;
+    }
+    span {
+      width: 100%;
+      font-size: 2.8em;
+      letter-spacing: -0.05em;
+      padding-top: 0.8em;
+      color: #2f2f2f;
+    }
+  }
+}
+
+
+.user-sidebar-button {
+  margin-top: 10px !important;
+}
+
+.calendar-add-button, .user-sidebar-button {
+  text-align: center;
+  font-family: 'Montserrat', Arial, Helvetica, sans-serif;
+  float:right;
+  border: #fbfbfb solid 4px;
+  cursor:pointer;
+  width: 100%;
+  background-color: #3498db;
+  color:white;
+  font-size:24px;
+  padding-top:15px;
+  padding-bottom:15px;
+  -webkit-transition: all 0.3s;
+  -moz-transition: all 0.3s;
+  transition: all 0.3s;
+  margin-top:-4px;
+  font-weight:700;
+
+  &:hover {
+    background-color: rgba(0,0,0,0);
+    color: #0493bd;
+  }
+
+}
+

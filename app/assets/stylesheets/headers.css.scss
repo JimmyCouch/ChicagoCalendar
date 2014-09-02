@@ -1,0 +1,58 @@
+.about-box.affix {
+  width: 250px;
+  top: 50px !important;
+  margin-bottom: 50px;
+}
+
+.affix {
+  top: 50px !important;
+  width:100%;
+  margin-bottom: 50px;
+}
+.navbar {
+  border-radius: 0px;
+  border: none;
+}
+
+.navbar-form {
+   padding-left: 0;
+}
+
+.navbar-collapse{
+   padding-left:0; 
+}
+
+.navbar {
+  margin-bottom: 0;
+}
+
+.navbar-lower {
+  min-height: 25px;
+  z-index: 1030;
+  background: url('/img/bottom-header-bg.jpg');
+}
+
+.navbar-top {
+  background: url('/img/header-bg.jpg');
+  min-height: 75px;
+  background-color: #FFFFFF;
+}
+
+.navbar-menu {
+  float: right;
+}
+
+.navbar-nav {
+  li {
+    font-family: 'Montserrat', Arial, Helvetica, sans-serif;
+    border-right: 4px solid rgba(32, 32, 32, 0.67);
+
+    &:first-child {
+      border-left: 4px solid rgba(32, 32, 32, 0.67);
+    }
+    &:hover {
+      background: rgba(32, 32, 32, 0.67);
+    }
+  }
+}
+

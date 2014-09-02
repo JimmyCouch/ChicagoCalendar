@@ -19,7 +19,6 @@ ready = ->
     $("body").css("padding-top", 100)
   $(window).bind 'scroll', ->
     position =  $(window).scrollTop() - $('.navbar-lower').position().top 
-    console.log position
     $("body").css("padding-top", 75) if position < -30
   $('.event-link a').hover ->
     $('.event-map').show()
@@ -47,6 +46,7 @@ ready = ->
         eventShow data
 
   eventShow = (data) ->
+    console.log data
     $('.about-box.selected').fadeIn().removeClass('hidden');
     date = data.datetime
     desc = data.desc
@@ -61,15 +61,15 @@ ready = ->
 
     $('.event-title').text title
     $('.event-desc').text desc.replace(/(<([^>]+)>)/ig,"")
-    #$('.event-time').text "Time: " + time if time != null
-    #$('.event-date').text regex_day
     if url != null || url != undefined
       $('.event-url').attr("href",url)
     $('.about-box-more').show()
     $('a.calendar-more-info-button').attr("href","/events/"+ id)
 
-    $clamp($('.event-title')[0], {clamp: 2});
-    $clamp($('.event-desc')[0], {clamp: 5});
+    if (!!$('.event-desc').length) && (!!$('.event-title'))
+      $clamp($('.event-title')[0], {clamp: 2});
+      $clamp($('.event-desc')[0], {clamp: 5});
+
     eventOptions = 
       zoom: 14
       center: new google.maps.LatLng(lat, lng)
