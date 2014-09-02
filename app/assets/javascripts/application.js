@@ -16,7 +16,6 @@
 //= require jquery.turbolinks
 //= require jquery_ujs
 //= require twitter/bootstrap
-//= require turbolinks
 //= require bootstrap
 //= require mustache
 //= require date
