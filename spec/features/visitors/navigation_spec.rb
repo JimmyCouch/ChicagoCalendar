@@ -9,10 +9,13 @@ feature 'Navigation links', :devise do
   #   When I visit the home page
   #   Then I see "home," "sign in," and "sign up"
   scenario 'view navigation links' do
+    FactoryGirl.create :event
     visit root_path
-    expect(page).to have_content 'Home'
     expect(page).to have_content 'Sign in'
     expect(page).to have_content 'Sign up'
+    expect(page).to have_link "calendar-button"
+    expect(page).to have_link "map-button"
+    expect(page).to have_link "day-button"
   end
 
 end

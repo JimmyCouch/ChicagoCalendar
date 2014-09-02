@@ -11,4 +11,10 @@ Rails.application.routes.draw do
   get '/user_addresses', to: 'users#addresses'
   get '/users/auth/facebook', as: "login"
   get '/calendar/export', to: 'calendar#export' , as: "export_calendar"
+
+
+
+  # Jasmine testing framework for coffeescript
+  mount JasmineRails::Engine => '/specs' if defined?(JasmineRails)
+  
 end

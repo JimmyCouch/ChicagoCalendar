@@ -1,5 +1,6 @@
 source 'https://rubygems.org'
 ruby '2.1.2'
+gem 'gmaps4rails'
 gem 'icalendar'
 gem "animate-rails"
 gem 'omniauth-facebook'
@@ -43,6 +44,9 @@ group :development do
   gem 'rb-inotify', :require=>false
 end
 group :development, :test do
+  gem 'jasmine-headless-webkit'
+  gem 'jasmine-rails'
+  gem 'jasmine'
   gem 'factory_girl_rails'
   gem 'pry-rails'
   gem 'pry-rescue'

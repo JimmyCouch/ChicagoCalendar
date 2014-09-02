@@ -19,9 +19,11 @@ feature 'Sign in', :devise do
   #   When I sign in with valid credentials
   #   Then I see a success message
   scenario 'user can sign in with valid credentials' do
-    user = FactoryGirl.create(:user)
-    signin(user.email, user.password)
-    expect(page).to have_content 'Signed in successfully.'
+    FactoryGirl.create :event
+    visit root_path
+    set_omniauth()
+    click_link_or_button 'Sign up'
+    expect(page).to have_content 'Successfully authenticated from Facebook account'
   end
 
   # Scenario: User cannot sign in with wrong email

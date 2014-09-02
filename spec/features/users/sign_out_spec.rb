@@ -9,9 +9,10 @@ feature 'Sign out', :devise do
   #   When I sign out
   #   Then I see a signed out message
   scenario 'user signs out successfully' do
-    user = FactoryGirl.create(:user)
-    signin(user.email, user.password)
-    expect(page).to have_content 'Signed in successfully.'
+    FactoryGirl.create :event
+    visit root_path
+    set_omniauth()
+    click_link_or_button 'Sign up'
     click_link 'Sign out'
     expect(page).to have_content 'Signed out successfully.'
   end

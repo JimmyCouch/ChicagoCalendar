@@ -1,7 +1,7 @@
 <div class="about-box-more">
 	<% if !@has_event %>
 		<%= form_tag(event_useradd_path(@event), method: "post") do %>
-		  <%= submit_tag("Add to calendar", class: "calendar-add-button") %>
+		  <%= submit_tag("Add to calendar", class: "calendar-add-button", id: "calendar-add-button") %>
 		<% end %>
 	<% else %>
 		<span class="calendar-add-button">Added to calendar!</span>
